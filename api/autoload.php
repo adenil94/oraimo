@@ -15,8 +15,8 @@ class autoload {
         }
     }  
 
-    static function entite(){
-          $file = 'entite'.$classname .'.php';
+    static function entite($classname){
+          $file = 'entite/'.$classname .'.php';
 
         if (file_exists($file)) {
             require_once $file;

@@ -5,7 +5,7 @@
  * @Copyright (c) kits, 2019
  */
 //namespace Kits;
- class Article extends Managers
+ class Articles extends Managers
 {
   
   protected $bdd ;

@@ -1,9 +1,15 @@
 <?php
 
-class article 
+class article extends Managers
 {
 
+  protected $bdd ;
+  public $lastId_user;
 
+    public function __construct($bdd)
+    {
+        $this->bdd = $bdd;
+    }
     /**
      * @author : andil Adebiyi
      * get_one_article() get specified article from bdd

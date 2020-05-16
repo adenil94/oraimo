@@ -12,7 +12,7 @@ class Database
 	public static  function connect()
 	{
 			try{
-				$bdd = new PDO("mysql:host=localhost;dbname=kitsmass",'root','',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+				$bdd = new PDO("mysql:host=localhost;dbname=oraimo",'root','',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 				$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				
 				}

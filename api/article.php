@@ -1,4 +1,6 @@
 <?php
+$_GET['action']="get_aticle";
+$_GET['id']="1";
 $response = ["status"=>"ok"];
 if (isset($_GET['action'])) {
 	$cle = $_GET['action'];
@@ -29,8 +31,8 @@ header('Access-Control-Allow-Origin: *');
 	}
 */
  require_once 'autoload.php';
-
- $article = new article ();
+ Autoload::loadClass(); 
+ $article = new article ( Database::connect());
 
 switch ($cle) {
 	case 'get_aticle':
@@ -53,7 +55,6 @@ switch ($cle) {
 		$response=[
 			"Status"=>"ok",
 			"response"=>"action not Found"
-
 			];
 		break;
 
