@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kitsmass.com</title>
+	<style>
+		.contenu{
+			width: 50%;
+			margin: 0px auto;
+			background-color: #FEFEFA;
+			text-align: center;
+		}
+		#rgb{
+			text-align: justify;
+			
+		}
+		#vcp{
+			margin: 0px auto;
+		}
+		#rvc{
+			text-align: justify;
+			
+		}
+		table{
+			border-collapse: collapse;
+			
+		}
+		th, td{
+			text-align: left;
+			padding: 8px;
+			font-size: 12px;
+		}
+		tr:nth-child(even){
+			background-color: #f2f2f2
+		}
+		th{
+			background-color: rgb(7, 58, 119);
+			color: white;
+		}
+		
+		h5{
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<section class="contenu">
+		<div id="rgb">
+			<h1>BIENVENUE sur Kitsmass.com</h1>
+			<p>Bonjour Madame/Monsieur {nom variable} vous venez de passer une commande sur Kitsmass.com, nous sommes heureux de vous accueillir chez Nous.Vous trouverez ci-dessous le récapitulatif de votre commande.</p>
+			<p>Nous vous rappelons qu’il est possible de corriger, modifier, actualiser vos informations pour une meilleure expérience sur Kitsmass.com. Merci de votre confiance et à bientôt sur Kitsmass.com
+			</p>
+		</div>
+			<h4><a href="https://kitsmass.com">JE CONTINUE MON SHOPPING</a></h4>
+			<hr>
+			VOS COORDONNÉES PERSONNELLES
+			<div id="rvc">
+			<!-- <h5> Titre :{titre}</h5> -->
+			<h5>Nom & Prénom: {nomPrenom}</h5>
+			<h5>Numéro de téléphone: {Numéro}</h5>
+			<h5>Frais de livraison: 0 FCFA</h5>
+			<h5>Lieux de livraison: {lieuxLivraison}</h5>
+			<h5>Droits de douane, taxes et redevance: 0 FCFA </h5>
+		    </div>
+			<br/>
+			RÉCAPITULATIF DE VOTRE COMMANDE
+
+			<table border="1" id="vcp">
+				<tr>
+					<th>
+						Photo de l’article
+					</th>
+					<th>
+						Nom
+					</th>
+					<th>
+						Quantité
+					</th>
+					<th>
+						Prix
+					</th>
+				</tr>
+				<tbody>
+{bodytable}	
+				</tbody>
+
+			</table>
+
+			<table border="1" id="vcp" style="margin-top: 20px;">
+				<tr>
+					<th>
+						TOTAL DE VOTRE COMMANDE
+					</th>
+					<th>
+						MODALITÉS DE PAIEMENT
+					</th>
+					<th>
+						PAIMENT A LA LIVRAISON
+					</th>
+					<th>
+						DÉLAI DE LIVRAISON
+					</th>
+				</tr>
+				<tbody>
+									<tr>
+					<td>
+						{TOTAL}
+					</td>
+					<td>
+						en espèces ou par Mobile money
+					</td>
+					<td>
+					  a la livraison
+					</td>
+					<td>
+						Entre 2 heures et 48 heures.
+					</td>
+				</tr>
+				</tbody>
+
+			</table>
+			<hr>
+			<footer><strong><a href="https://kitsmass.com">Kitsmass.com</a>  </strong>
+			votre Service Client <a href="https://kitsmass.com">Kitsmass.com</a> </footer>
+		</section>
+	</body>
+	</html>
