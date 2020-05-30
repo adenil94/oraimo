@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<routes> 
+
+	<route url="/crm-admin-oraimo" module="Crm" action="PageDacceuilArticleTable" />
+	<route url="/crm-admin-oraimo/Ajoute-article" module="Crm" action="PageAjoutArticle" />
+
+	<route url="/" module="GestionMaison" action="Connexion" />
+
+</routes>

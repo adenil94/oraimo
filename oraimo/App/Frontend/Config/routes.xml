@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<routes> 
+	<route url="/" module="oraimo" action="Index" />
+	<route url="/Article-(.*)-([0-9]+)" module="oraimo" action="simple" vars="lien,id" ></route>
+
+</routes>

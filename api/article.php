@@ -36,20 +36,17 @@ header('Access-Control-Allow-Origin: *');
 
 switch ($cle) {
 	case 'get_aticle':
-		$post="";$file="";
-		$response["response"] = $article -> get_one_article($_GET['id']);
+		$response["response"] = $article -> get_one_article($_GET['identification']);
 		break;
 	case 'get_aticles':
-		$post="";$file="";
 		$response["response"] = $article -> get_all_article();
 		break;
 	case 'set_articles':
-		$post="";$file="";
-		$response["response"] = $article -> save_article();
+		$post=$_POST['article'];$file=$_FILES['picture'];
+		$response["response"] = $article -> save_article($post, $file);
 		break;
 	case 'del_articles':
-		$post="";$file="";
-		$response["response"] = $article -> del_article($_GET['id']);
+		$response["response"] = $article -> del_article($_GET['identification']);
 		break;
 	default:
 		$response=[
