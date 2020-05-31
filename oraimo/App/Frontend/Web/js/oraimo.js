@@ -42,18 +42,30 @@ function dataArticle(){
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
                                         <a href="/Article-`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
+                                       <br> <span class="price"><span class="kobolg-Price-amount amount">
+                                        <span
+                                            class="kobolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA</span>
                                     </h3>
+                                    
 
                                     <div class="rating-wapper nostar" style="text-align: center;">
-                                        <i class="fa fa-shopping-bag commander" style="font-size: 30px;color: dodgerblue;" data-id="`+article[i].idarticle+`" aria-hidden="true"></i>
+                                        <i class="fa fa-shopping-bag panierAdd" data-name="`+article[i].nom+`" data-prix="`+article[i].prix+`"  data-img="`+urlimage+`/`+images[0]+`" style="font-size: 30px;color: dodgerblue; position:relative" data-id="`+article[i].idarticle+`" aria-hidden="true">
+                                        <span class="countNumberme`+article[i].idarticle+`" style="position:absolute; top:-13px;left:-6px; font-size:21px;color: #8ec31f;">0</span>
+                                        </i>
                                         <i class="fa fa-share-square partage mt-4" style="font-size: 30px;color: cadetblue;" data-id="`+article[i].idarticle+`"  aria-hidden="true"></i>
-                                        <a href="https://wa.me/22999915230/?text=Salut! j'ai vu votre cet article `+article[i].nom+` sur https://www.oraimo-bj.com/, j'aimerais avoir plus d'informations.">
+                                        <a class="whatsapp" href="#" data-nomarticle="`+article[i].nom+`">
                                         <i class="fa fa-whatsapp mt-4" style="font-size: 30px;color: green;" aria-hidden="true" data-id="`+article[i].idarticle+`"></i>
                                         </a>
                                     </div>
 
-                                    <span class="price"><span class="kobolg-Price-amount amount"><span
-                                            class="kobolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA</span>
+                                      <div class="rating-wapper nostar" style="text-align: center;">
+                                        <button class='btn btn-sm btn-info acherter '
+                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+`     
+                                         style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
+                                        Acherter</button>
+                                    </div>
+
+                                    
                                 </div>
                             </div>
                         </li>
@@ -82,14 +94,14 @@ function dataArticle(){
                                 <div class="group-button">
                                     <div class="group-button-inner">
                                         <div class="mb-3">
-                                        <button class="btn-sm commander" style="    background-color: #8ec31f;" data-id="`+article[i].idarticle+`"  >
+                                        <button class="btn-sm panierAdd"  data-name="`+article[i].nom+`" data-prix="`+article[i].prix+`"  data-img="`+urlimage+`/`+images[0]+`"  style="    background-color: #8ec31f;" data-id="`+article[i].idarticle+`"  >
                                         <i class="fa fa-shopping-bag "  aria-hidden="true"></i>
-                                        Commander
+                                        Panier
                                         </button>
                                         </div>
 
                                         <div class="mb-3"> 
-                                        <a class="btn-sm partage"  href="https://wa.me/22999915230/?text=Salut! j'ai vu votre cet article `+article[i].nom+` sur https://www.oraimo-bj.com/, j'aimerais avoir plus d'informations."style="    background-color: #8ec31f;" data-id="`+article[i].idarticle+`" >
+                                        <a class="btn-sm partage whatsapp"  href="#"style="    background-color: #8ec31f;" data-nomarticle="`+article[i].nom+`" >
 										<i class="fa fa-whatsapp " ></i>
                                         Ecrit au vendeur</a></div>
 
@@ -116,6 +128,10 @@ function dataArticle(){
 }
 
 
+$(document).on("click",".whatsapp",function(){
+   var nomArticle= $(this).attr("data-nomarticle");
+    window.open("https://wa.me/22999915230/?text=Salut! j'ai vu cet article "+nomArticle+"  sur https://www.oraimo-bj.com/, j'aimerais avoir plus d'informations.", '_blank');
+})
 $(document).on("click","#mode-grid",function(){
 	$(this).addClass("active");
 	$("#mode-list").removeClass("active");
@@ -128,3 +144,72 @@ $(document).on("click","#mode-list",function(){
 	$(".grid").hide();
 	$(".list").show("slow");
 })
+
+$(document).on("click",".panierAdd",function(){
+    var nom=$(this).attr("data-name");
+    var img=$(this).attr("data-img");
+    var prix=$(this).attr("data-prix");
+    var id=$(this).attr("data-id");
+    $(this).attr("data-removearticle","remocarticle"+id);
+    var totale=parseInt($(".totale").html()) + parseInt(prix) ;
+    $(".totale").html(totale);
+    var countNumberme=parseInt($(".countNumberme"+id).html())+1;
+    $(".countNumberme"+id).html(countNumberme);
+
+    var countTotale=parseInt($(".count").html()) + 1;
+
+    $(".count").html(countTotale);
+
+    var li=` <li class="oraimolg-mini-cart-item mini_cart_item remocarticle`+id+`_`+countTotale+`" >
+                                        <a href="#" class="remove remove_from_cart_button" data-id="`+id+`" data-remove="remocarticle`+id+`_`+countTotale+`" data-prix="`+prix+`">×</a>
+                                        <a href="#">
+                                            <img src="`+img+`"
+                                                 class="attachment-oraimolg_thumbnail size-oraimolg_thumbnail"
+                                                 alt="img" width="600" height="778">`+nom+`&nbsp;
+                                        </a>
+                                        <span class="quantity">1 × <span
+                                                class="oraimolg-Price-amount amount"><span
+                                                class="oraimolg-Price-currencySymbol"></span>`+prix+`</span> FCFA</span>
+                                    </li>`;
+    $(".product_list_widget").append(li);
+
+})
+
+
+$(document).on("click",".remove_from_cart_button",function(){
+    var li_for_remove= $(this).attr("data-remove");
+    var id=$(this).attr("data-id");
+    $("."+li_for_remove).hide('slow', function(){ $("."+li_for_remove).remove(); });
+    var countTotale=parseInt($(".count").html()) - 1;
+    $(".count").html(countTotale);
+    var prix=$(this).attr("data-prix");
+    var countNumberme=parseInt($(".countNumberme"+id).html())-1;
+    $(".countNumberme"+id).html(countNumberme);
+    var totale=parseInt($(".totale").html()) - parseInt(prix) ;
+    $(".totale").html(totale);
+});
+
+$(document).on("click",'.acherter',function(){
+    var name_price=" Article: <small style='color:#8ec31f' >"+$(this).attr("data-nom")+"  "+$(this).attr("data-prix")+" FCFA</small>";
+    $(".produit_paiment").html(name_price);
+    $("#achertermodal").modal();
+})
+
+$(document).on("click",'#Valide',function(){
+
+   var myForm = document.querySelector('#valide_achat_form');
+   var formData= new FormData(myForm); 
+   console.log(formData);
+})
+
+
+$(document).on("change",".paiement",function(){
+    if (this.value == 'now') {
+        $(".ref_paiement").show("slow");
+    }
+    else if (this.value == 'after') {
+        $(".ref_paiement").hide("slow");
+        
+    } 
+})
+

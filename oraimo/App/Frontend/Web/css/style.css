@@ -1096,7 +1096,7 @@ article.sticky .post-title a::before {
 	margin-bottom: 0;
 }
 .widget_shopping_cart .oraimolg-mini-cart__buttons .button {
-	width: 50%;
+	width: 100%;
 	display: inline-block;
 	float: left;
 	font-family: 'sofia_promedium';
@@ -9174,7 +9174,7 @@ form.oraimolg-checkout::after {
 .oraimolg-input-wrapper > input,
 .form-row > input {
 	width: 100%;
-	height: 52px;
+	height: 30px;
 	line-height: 50px;
 	background-color: #fff;
 	border-color: #fff;
@@ -15153,3 +15153,22 @@ body .oraimolg-mapper .text__area {
 	width: 100%;
 	height: 100%;
 }
+
+
+.panierAdd:hover{
+	cursor: pointer;
+}
+.partage:hover{
+	cursor: pointer;
+}
+.panierAdd:active{
+	transform: scale(0.7);
+}
+.partage:active{
+	cursor: pointer;
+}
+
+
+
+
+
