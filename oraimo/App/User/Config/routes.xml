@@ -2,88 +2,9 @@
 
 <routes> 
 
-	<route url="/Location" module="LocationFront" action="Index" />
+	<route url="/user/compte" module="User" action="PageAjoutArticle" />
+	<route url="/crm-admin-oraimo/Ajoute-article" module="Crm" action="PageAjoutArticle" />
 
 	<route url="/" module="GestionMaison" action="Connexion" />
-
-	<route url="/GestionMaison/Acceuil" module="GestionMaison" action="PageDacceuil" />
-
-	<route url="/GestionMaison/Parametre/Profil" module="GestionMaison" action="ParametreProfile" />
-	<route url="/GestionMaison/Parametre/Application" module="GestionMaison" action="ParametreGestiononMaison" />
-
-	<route url="/GestionMaison/Form/Maison/(.*)/([0-9]+)" module="GestionMaison" action="AjoutMaison" vars="action,id" />
-
-	<route url="/GestionMaison/Form/Chambres/(.*)/([0-9]+)" module="GestionMaison" action="AjoutChambre" vars="action,id" />
-
-	<route url="/GestionMaison/Form/Locataires/(.*)/([0-9]+)" module="GestionMaison" action="AjoutLocataire" vars="action,id" />
-
-	<route url="/GestionMaison/Form/Louer/(.*)/([0-9]+)" module="GestionMaison" action="AjoutLouer" vars="action,id" /> 
-
-	<route url="/GestionMaison/Form/Payement/(.*)/([0-9]+)" module="GestionMaison" action="AjoutPayement"  vars="action,id" />
-
-
-
-	<!-- <route url="/GestionMaison/Form/Maison/(.*)/([0-9]+)" module="GestionMaison" action="AjoutMaison" vars="action,id" />
-
-	<route url="/GestionMaison/Form/Chambres/(.*)/([0-9]+)" module="GestionMaison" action="AjoutChambre" vars="action,id" />
-
-	<route url="/GestionMaison/Form/Locataires/(.*)/([0-9]+)" module="GestionMaison" action="AjoutLocataire" vars="action,id" />  -->
-
-
-
-	
-
-
-
-
-
-	<route url="/GestionMaison/Rapport/Maisons" module="GestionMaison" action="TableMaison" />
-
-	<route url="/GestionMaison/Rapport/Chambres" module="GestionMaison" action="TableChambreParMaison" />
-
-	<route url="/GestionMaison/Rapport/ChambresLibre" module="GestionMaison" action="TableChambreLibre" />
-
-	<route url="/GestionMaison/Rapport/Tous_Les_Payements" module="GestionMaison" action="TableTousLesPayement" />
-
-	<route url="/GestionMaison/Rapport/Locataires" module="GestionMaison" action="TableLocataire" />
-
-	<route url="/GestionMaison/Rapport/Tous_Locataires" module="GestionMaison" action="TableLocataire" />
-	<route url="/GestionMaison/Rapport/Tous_Locataires_Avec_Chambre" module="GestionMaison" action="TableLocataireChambre" />
-
-	<route url="/GestionMaison/Rapport/Locataire_En_Regle" module="GestionMaison" action="TableLocataireEnRegle" />
-
-	<route url="/GestionMaison/Rapport/Locataire_En_Dette" module="GestionMaison" action="TableLocataireEnDette" />
-
-	
-
-
-
-	
-
-
-
-	<route url="/Payement/(.*)/([0-9]+)" module="GestionMaison" action="Payement" vars="action,id" />
-
-	<route url="/Chambre/(.*)/([0-9]+)" module="GestionMaison" action="Chambre" vars="action,id" />
-
-	<route url="/Forgotpassword" module="GestionMaison" action="Forgotpassword" />
-
-	<route url="/Register" module="GestionMaison" action="Register" />
-
-	<route url="/AjoutMaison" module="GestionMaison" action="" />
-
-	<route url="/ModifMaison/([0-9]+)" module="GestionMaison" action="ModifMaison" vars="id" />
-
-	<route url="/AjoutLocataire" module="GestionMaison" action="" />
-
-	<route url="/ModifLocataire/([0-9]+)" module="GestionMaison" action="ModifLocataire" vars="id" />
-
-	<route url="/chambre/([0-9]+)/(.*)" module="GestionMaison" action="chambre" vars="id,nom" />
-
-
-
-	<route url="/login" module="GestionMaison" action="login" />
-
-	<route url="/Maison-([0-9]+)\.html" module="GestionMaison" action="toute page" vars="id"/>
 
 </routes>

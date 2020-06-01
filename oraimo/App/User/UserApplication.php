@@ -1,11 +1,11 @@
 <?php
-class LocationApplication extends Application
+class UserApplication extends Application
 {
   public function __construct()
   {
     parent::__construct();
 
-    $this->name = 'Location';
+    $this->name = 'User';
   }
 
   public function run()

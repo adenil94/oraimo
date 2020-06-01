@@ -1,7 +1,7 @@
     <style type="text/css">
         .list{
             display: none;
-        }
+        } 
     </style>
     <div class="banner-wrapper has_background">
         <img src="/App/Frontend/Web/images/banner-for-all2.jpg"
@@ -158,6 +158,7 @@
     </div>
   </div>
 </div>
+
 
 
 <script type="text/javascript">

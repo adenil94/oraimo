@@ -22,8 +22,12 @@ class Autoload {
 		require 'App/Backend/BackendAutoload.php';
 		BackendAutoload::loadClass();
         // APP GestionLocataire gérant ANDIL ADEBIYI
+        require 'App/User/UserAutoload.php';
+        UserAutoload::loadClass();   
+
+        // APP GestionLocataire gérant ANDIL ADEBIYI
         require 'App/Frontend/FrontendAutoload.php';
-        FrontendAutoload::loadClass();   
+        FrontendAutoload::loadClass();
     }
 
 

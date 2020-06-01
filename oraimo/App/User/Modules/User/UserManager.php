@@ -1,6 +1,6 @@
 <?php
 
-class GestionMaisonManager extends Managers
+class UserManager extends Managers
 {
   protected $bdd;
  

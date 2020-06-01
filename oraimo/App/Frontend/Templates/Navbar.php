@@ -48,7 +48,11 @@
                  <div class="header-control">
                     <div class="header-control-inner">
                         <div class="meta-dreaming">
-                            
+                             <div class="menu-item block-user block-dreaming connectuser">
+                                <i class="block-link connectuser" href="">
+                                    <span class="flaticon-profile connectuser"></span>
+                                </i>
+                            </div>
                             <div class="block-minicart block-dreaming oraimolg-mini-cart oraimolg-dropdown">
 
                                 <div class="shopcart-dropdown block-cart-link" data-oraimolg="oraimolg-dropdown">
@@ -105,27 +109,26 @@
         <div class="header-mobile-right">
             <div class="header-control-inner">
                 <div class="meta-dreaming">
-                    <div class="block-minicart block-dreaming oraimolg-mini-cart oraimolg-dropdown">
-                        <div class="shopcart-dropdown block-cart-link" data-oraimolg="oraimolg-dropdown">
-                            <a class="block-link link-dropdown" href="cart.html">
+                    <div class="block-minicart block-dreaming kobolg-mini-cart kobolg-dropdown">
+                        <div class="shopcart-dropdown block-cart-link" data-kobolg="kobolg-dropdown">
+                            <a class="block-link link-dropdown" href="">
                                 <span class="flaticon-online-shopping-cart"></span>
                                 <span class="count">0</span>
                             </a>
                         </div>
-                        <div class="widget oraimolg widget_shopping_cart">
+                        <div class="widget kobolg widget_shopping_cart">
                             <div class="widget_shopping_cart_content">
-                                <h3 class="minicart-title">Votre panier<span class="minicart-number-items"> <span class="count">0</span></span></h3>
-                                <ul class="oraimolg-mini-cart cart_list product_list_widget">
-                                    
-                                    
+                                <h3 class="minicart-title">Votre panier<span class="minicart-number-items">0</span></h3>
+                                <ul class="kobolg-mini-cart cart_list product_list_widget">
+                                   
                                 </ul>
                                 <p class="oraimolg-mini-cart__total total"><strong>total:</strong>
-                                    <span class="oraimolg-Price-amount amount"><span
-                                            class="oraimolg-Price-currencySymbol "></span> <span class="totale">0</span>FCFA</span>
-                                </p>
-                                <p class="oraimolg-mini-cart__buttons buttons">
-                                    <a href="" class="button checkout oraimolg-forward validecommande">Commander</a>
-                                </p>
+                                            <span class="oraimolg-Price-amount amount"><span
+                                                    class="oraimolg-Price-currencySymbol"><span class="totale">0</span>FCFA</span>
+                                        </p>
+                                        <p class="oraimolg-mini-cart__buttons buttons">
+                                            <a  class="button checkout oraimolg-forward validecommande">Commander</a>
+                                        </p>
                             </div>
                         </div>
                     </div>

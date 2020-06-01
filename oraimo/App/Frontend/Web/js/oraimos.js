@@ -92,29 +92,24 @@ function dataArticle(){
                                     </div>
                                 </div>
                                 <div class="group-button">
-                                    <div class="group-button-inner">
-                                        <div class="mb-3">
-                                        <button class="btn-sm panierAdd"  data-name="`+article[i].nom+`" data-prix="`+article[i].prix+`"  data-img="`+urlimage+`/`+images[0]+`"  style="    background-color: #8ec31f;" data-id="`+article[i].idarticle+`"  >
-                                        <i class="fa fa-shopping-bag "  aria-hidden="true"></i>
-                                        Panier
-                                        </button>
-                                        </div>
-
-                                        <div class="mb-3"> 
-                                        <a class="btn-sm partage whatsapp"  href="#"style="    background-color: #8ec31f;" data-nomarticle="`+article[i].nom+`" >
-										<i class="fa fa-whatsapp " ></i>
-                                        Ecrit au vendeur</a></div>
-
-                                            
-                                        <div class="yith-wcwl-add-to-wishlist">
-                                            <div class="yith-wcwl-add-button show">
-                                                <button class="btn-sm partage"  style="    background-color: #8ec31f;" data-id="`+article[i].idarticle+`"  >
-                                                <i class="fa fa-share-square  "  aria-hidden="true"></i>
-                                                Partager</button>
-                                            </div>
-                                        </div>
+                                    <div class="group-button-inner mb-3" style="text-align: center;">
+                                         <i class="fa fa-shopping-bag panierAdd" data-name="`+article[i].nom+`" data-prix="`+article[i].prix+`"  data-img="`+urlimage+`/`+images[0]+`" style="font-size: 30px;color: dodgerblue; position:relative" data-id="`+article[i].idarticle+`" aria-hidden="true">
+                                        <span class="countNumberme`+article[i].idarticle+`" style="position:absolute; top:-13px;left:-6px; font-size:21px;color: #8ec31f;">0</span>
+                                        </i>
+                                        <i class="fa fa-share-square partage mt-4" style="font-size: 30px;color: cadetblue;" data-id="`+article[i].idarticle+`"  aria-hidden="true"></i>
+                                        <a class="whatsapp" href="#" data-nomarticle="`+article[i].nom+`">
+                                        <i class="fa fa-whatsapp mt-4" style="font-size: 30px;color: green;" aria-hidden="true" data-id="`+article[i].idarticle+`"></i>
+                                        </a>
                                         
                                     </div>
+                                    <div class="rating-wapper nostar" style="text-align: center;">
+                                        <button class='btn btn-sm btn-info acherter '
+                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+`     
+                                         style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
+                                        Acherter</button>
+                                    </div>
+
+                                      
                                 </div>
                             </div>
                         </li>`;
@@ -189,12 +184,14 @@ $(document).on("click",".remove_from_cart_button",function(){
     $(".totale").html(totale);
 });
 
+// losque l'utilisateur choisis le produit a acheter
 $(document).on("click",'.acherter',function(){
     var name_price=" Article: <small style='color:#8ec31f' >"+$(this).attr("data-nom")+"  "+$(this).attr("data-prix")+" FCFA</small>";
     $(".produit_paiment").html(name_price);
     $("#achertermodal").modal();
 })
 
+// lors de la validation de l'acchat
 $(document).on("click",'#Valide',function(){
 
    var myForm = document.querySelector('#valide_achat_form');
@@ -203,6 +200,8 @@ $(document).on("click",'#Valide',function(){
 })
 
 
+
+// lors du choix de paiement 
 $(document).on("change",".paiement",function(){
     if (this.value == 'now') {
         $(".ref_paiement").show("slow");
@@ -213,3 +212,17 @@ $(document).on("change",".paiement",function(){
     } 
 })
 
+// quand on click sur le bouton connexion 
+$(document).on("click",'.connectuser',function(e){
+    e.preventDefault();
+    $("#connexionmodale").modal();
+})
+// choix de connexion a effectuer
+$(document).on("change",".connexion",function(){
+    if (this.value == 'creat') {
+        $(".confirm_passe").show("slow");
+    }
+    else if (this.value == 'connexion') {
+        $(".confirm_passe").hide("slow");     
+    } 
+})

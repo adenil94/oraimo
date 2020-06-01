@@ -25,4 +25,4 @@
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 
 <script src="/App/Frontend/Web/js/functions.js"></script>
-<script src="/App/Frontend/Web/js/oraimo.js?v74"></script>
+<script src="/App/Frontend/Web/js/oraimos.js?v74"></script>

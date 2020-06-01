@@ -1,23 +1,23 @@
 <?php
 
-class LocationAutoload {
+class UserAutoload {
 
     static function loadClass() {
-        spl_autoload_register(array(__CLASS__, 'LocationAppClass'));
-        spl_autoload_register(array(__CLASS__, 'LocationFronClass'));
+        spl_autoload_register(array(__CLASS__, 'BackendAppClass'));
+        spl_autoload_register(array(__CLASS__, 'userFronClass'));
         spl_autoload_register(array(__CLASS__, 'LocationBackClass'));
     }
 
-    static function LocationAppClass($classname) {
-        $file = 'App/Location/'.$classname .'.php';
+    static function BackendAppClass($classname) {
+        $file = 'App/User/'.$classname .'.php';
 
         if (file_exists($file)) {
             require_once $file;
         }
     }
 
-    static function LocationFronClass($classname) {
-        $file = 'App/Location/Modules/LocationFront/'.$classname .'.php';
+    static function userFronClass($classname) {
+        $file = 'App/User/Modules/user/'.$classname .'.php';
         if (file_exists($file)) {
             require_once $file;
         }

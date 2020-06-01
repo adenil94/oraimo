@@ -150,5 +150,5 @@
   </div>
 </div>
 <script type="text/javascript">
-	setInterval(function(){ $(".overflow").css("display","none"); }, 3000);
+	setInterval(function(){ $(".overflow").css("display","none"); }, 1500);
 </script>
