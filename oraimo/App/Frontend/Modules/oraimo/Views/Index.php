@@ -88,76 +88,7 @@
 
 
 
-<div class="modal fade" id="achertermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document" style="max-width: fit-content;">
-    <div class="modal-content">
-      
-      <div class="modal-body">
-                   <div class="widget oraimolg widget_shopping_cart">
-                                    <div class="widget_shopping_cart_content">
-                                        <h3 class="minicart-title">
-                                            Information d'achat
-                                        </h3>
-                                            <span class="produit_paiment"></span>  
-                                        <ul class="oraimolg-mini-cart cart_list product_list_widget">
-                                            <form class="needs-validation " id="valide_achat_form" >
-                                                <div class="row mb-2">
-                                                    <div class="col-md-12">
-                                                      <input type="text" class="form-control" id="nom_prenom" placeholder="Nom et Prénom" value="" required>
-                                                    </div>
-                                                </div>
-                                                 <div class="row mb-2">
-                                                    <div class="col-md-12">
-                                                      <input type="text" class="form-control" id="numero" placeholder="Numéro de téléphone" value="" required>
-                                                    </div>
-                                                     
-                                                </div>
-                                                <div class="row mb-2">
-                                                    <div class="col-md-12">
-                                                      <input type="text" class="form-control" id="ville_quartier" placeholder="Ville/Quartier" value="" required>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-2">
-                                                    <div class="col-md-12">
-                                                      <input type="text" class="form-control" id="code_promot" placeholder="Code promot" value="" required>
-                                                    </div>
-                                                </div>
-                                                <div class=" mb-2">
-                                                    <div class="form-check">
-                                                          <input class="form-check-input paiement" type="radio" name="paiement" id="after" value="after" checked>
-                                                          <label class="form-check-label" for="after">
-                                                            Payer à la livraison
-                                                          </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                          <input class="form-check-input paiement" type="radio" name="paiement" id="now" value="now" >
-                                                          <label class="form-check-label" for="now">
-                                                           Payer maintenant 
-                                                          </label>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="row mb-2 ref_paiement" style="display: none;" >
-                                                    <div class="col-md-12">
-                                                      <input type="text" class="form-control" id="ref_paiement" placeholder="Référence de paiement MOMO" value="" required>
-                                                      <small>Numéro d'envoie : 66523726</small>
-                                                    </div>
 
-                                                </div>
-                                            </form>
-
-                                            
-                                        </ul>
-                                       
-                                            <button class="btn btn-info " id="Valide" style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;">Validé</button>
-                                        
-                                    </div>
-                                </div>
-      </div>
-     
-    </div>
-  </div>
-</div>
 
 
 

@@ -1,18 +1,24 @@
-
-// `<tr><td>`+article[i].nom+`</td>
-// 					<td>`+article[i].prix+`</td>
-// 					<td>`+article[i].tag+`</td>
-// 					<td>picture</td>
-// 					<td>`+article[i].vue+`</td>
-// 					<td>`+article[i].lien+`</td>
-// 					<td>`+article[i].idcommentaire+`</td>
-// 					<td>`+article[i].idarticle+`</td>
-// 					<td>`+article[i].description+`</td>
-// 					<td>`+article[i].commentaire+`</td>
-// 					<td>`+article[i].categorie+`</td>
-// 					<td>`+article[i].article_idarticle+`</td>
-// 					<td>`+article[i].aime+`</td></tr>
-// 		  			`;
+ code = window.location.pathname
+ code_promo=code.split("/");
+ code_promo=code_promo[1];
+checkcodePromotion(code_promo)
+function checkcodePromotion(code_promo){
+    var URLUSER=$('#URLUSER').val();
+    $.get( URLUSER, { action:"check_code",code:code_promo } )
+    .done(function( data ) {
+        var response=data;
+        
+            if (response.response=="notExist_Or_invalide") {
+                 $("#code_promot").val(code_promo);
+                $(".codevalidationError").show();
+                 $(".reductionpercent").html("0");
+            }else{
+                 $("#code_promot").val(code_promo);
+                $(".codevalidationTrue").show();
+                $(".reductionpercent").html(response.response.reduction);
+            }
+         }) 
+ }
 function dataArticle(){
 	var urlimage="https://api.kitsmass.com/oraimo/img_article"
 	var URLARTICLE=$('#URLARTICLE').val();
@@ -60,7 +66,7 @@ function dataArticle(){
 
                                       <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+`     
+                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+`    data-id=`+article[i].idarticle+`  
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
                                         Acherter</button>
                                     </div>
@@ -104,7 +110,7 @@ function dataArticle(){
                                     </div>
                                     <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+`     
+                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+` data-id=`+article[i].idarticle+`  
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
                                         Acherter</button>
                                     </div>
@@ -122,6 +128,93 @@ function dataArticle(){
 
 }
 
+function sendForm(formData,messagesucess,rederecto,idprogress,myurl){
+
+                $.ajax( {
+                    url        : myurl,
+                    type       : 'POST',
+                    cle        : 'action',
+                    contentType: false,
+                    cache      : false,
+                    processData: false,
+                    data       : formData,
+                    xhr        : function ()
+                    {
+                        var jqXHR = null;
+                        if ( window.ActiveXObject )
+                        {
+                            jqXHR = new window.ActiveXObject( "Microsoft.XMLHTTP" );
+                        }
+                        else
+                        {
+                            jqXHR = new window.XMLHttpRequest();
+                        }
+
+                        //Upload progress
+                        jqXHR.upload.addEventListener( "progress", function ( evt )
+                        {
+                            if ( evt.lengthComputable )
+                            {
+                                var percentComplete = Math.round( (evt.loaded * 100) / evt.total )-1;
+                                //Do something with upload progress
+                                 $(idprogress).css('width',percentComplete+"%");
+                                 $(idprogress).attr('aria-valuenow',percentComplete);
+                                
+
+                               
+                                 
+                                $(idprogress).html( percentComplete+"%");
+                                $(idprogress+"title").html( percentComplete+"%");
+                                console.log( 'Uploaded percent', percentComplete );
+                            }
+                        }, false );
+
+                        //Download progress
+                        jqXHR.addEventListener( "progress", function ( evt )
+                        {
+                            if ( evt.lengthComputable )
+                            {
+                                var percentComplete = Math.round( (evt.loaded * 100) / evt.total );
+                                
+                            }
+                        }, false );
+
+                        return jqXHR;
+                    },
+                    success    : function ( data )
+                    {
+                         var reponse  = data;
+                        //Do something success-ish
+                        
+                        if (reponse.response==true) {
+
+                        console.log( 'Completed.' );
+                        setTimeout(function(){
+                            $(idprogress).html( "100%");
+                             $('.overflow').hide();
+                            swal("Super!", messagesucess, "success")
+                                .then((value) => {
+                                    $(':input').not(":button",":reset",":checkbox").val("");
+                                    $(':checkbox').prop('checked',false);
+                                    if (rederecto!="") {
+                                    window.location.href=rederecto;
+
+                                    }
+                                });
+
+                           }, 2000);
+                        }else{
+                            swal("Oups!", "veuillez  réessayer!", "error")
+                                .then((value) => {
+                                  //location.reload(true);
+                                });
+                            
+                        }
+
+                        
+                    }
+                } );
+}
 
 $(document).on("click",".whatsapp",function(){
    var nomArticle= $(this).attr("data-nomarticle");
@@ -186,18 +279,15 @@ $(document).on("click",".remove_from_cart_button",function(){
 
 // losque l'utilisateur choisis le produit a acheter
 $(document).on("click",'.acherter',function(){
-    var name_price=" Article: <small style='color:#8ec31f' >"+$(this).attr("data-nom")+"  "+$(this).attr("data-prix")+" FCFA</small>";
+
+    var prix =  parseInt($(this).attr("data-prix")) - (parseInt($(".reductionpercent").html()) * parseInt($(this).attr("data-prix")) /100);
+    var name_price=" Article: <small style='color:#8ec31f' >"+$(this).attr("data-nom")+"  "+prix+" FCFA</small>";
+    $(".article_acheter").val($(this).attr("data-id"))
     $(".produit_paiment").html(name_price);
     $("#achertermodal").modal();
 })
 
-// lors de la validation de l'acchat
-$(document).on("click",'#Valide',function(){
 
-   var myForm = document.querySelector('#valide_achat_form');
-   var formData= new FormData(myForm); 
-   console.log(formData);
-})
 
 
 
@@ -226,3 +316,4 @@ $(document).on("change",".connexion",function(){
         $(".confirm_passe").hide("slow");     
     } 
 })
+
