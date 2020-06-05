@@ -1,5 +1,5 @@
  
- <input type="text" id="URLARTICLE"  hidden name="URLARTICLE" value="http://kitmass.d.com/api/oraimo/article.php">
+ <input type="text" id="URLARTICLE"  hidden name="URLARTICLE" value="https://api.kitsmass.com/oraimo/article.php">
 
 <script src="/App/Backend/Web/js/core/jquery.3.2.1.min.js"></script>
 	<script src="/App/Backend/Web/js/core/popper.min.js"></script>
