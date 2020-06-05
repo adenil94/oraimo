@@ -10,7 +10,12 @@ function checkcodePromotion(code_promo){
         
             if (response.response=="notExist_Or_invalide") {
                  $("#code_promot").val(code_promo);
-                $(".codevalidationError").show();
+                 if (code_promo=="") {
+
+                 }else{
+
+                    $(".codevalidationError").show();
+                 }
                  $(".reductionpercent").html("0");
             }else{
                  $("#code_promot").val(code_promo);
@@ -66,9 +71,9 @@ function dataArticle(){
 
                                       <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+`    data-id=`+article[i].idarticle+`  
+                                         data-nom="`+article[i].nom+`" data-prix="`+article[i].prix+`"    data-id="`+article[i].idarticle+`"  
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
-                                        Acherter</button>
+                                        Acheter</button>
                                     </div>
 
                                     
@@ -110,9 +115,9 @@ function dataArticle(){
                                     </div>
                                     <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom=`+article[i].nom+` data-prix=`+article[i].prix+` data-id=`+article[i].idarticle+`  
+                                         data-nom="`+article[i].nom+`" data-prix="`+article[i].prix+`" data-id="`+article[i].idarticle+`"  
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
-                                        Acherter</button>
+                                        Acheter</button>
                                     </div>
 
                                       
@@ -208,7 +213,7 @@ function sendForm(formData,messagesucess,rederecto,idprogress,myurl){
                                 .then((value) => {
                                   //location.reload(true);
                                 });
-                            
+                            $('.overflow').hide();
                         }
 
                         
@@ -316,4 +321,5 @@ $(document).on("change",".connexion",function(){
         $(".confirm_passe").hide("slow");     
     } 
 })
+
 

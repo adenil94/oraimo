@@ -1,5 +1,5 @@
  
- <input type="text" id="URLARTICLE"  hidden name="URLARTICLE" value="http://kitmass.d.com/api/oraimo/article.php">
+ <input type="text" id="URLARTICLE"  hidden name="URLARTICLE" value="https://api.kitsmass.com/oraimo/article.php">
 
 <script src="/App/Backend/Web/js/core/jquery.3.2.1.min.js"></script>
 	<script src="/App/Backend/Web/js/core/popper.min.js"></script>
@@ -72,3 +72,6 @@
 	<!-- Millenium DEMO methods, don't include it in your project! -->
 	<script src="/App/Backend/Web/js/oraimo.js"></script>
 	<script src="/App/Backend/Web/js/datatableloader.js"></script>
+	<script type="text/javascript">
+	var URLARTICLE=$("#URLARTICLE").val();
+</script>

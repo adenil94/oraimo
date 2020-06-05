@@ -73,10 +73,10 @@
                                                 </div>
                                                 <div class="row mb-2">
                                                     <div class="col-md-12">
-                                                      <input type="text" class="form-control"  name="code_promot" id="code_promot" placeholder="Code promot" value="" required readonly>
+                                                      <input type="text" class="form-control"  name="code_promot" id="code_promot" placeholder="Code promo" value="" required readonly>
                                                     </div>
-                                                    <small class="codevalidationError ml-3" style="color: red;display: none;">code promot invalide ou expiré</small>
-                                                    <small class="codevalidationTrue ml-3" style="color: green;display: none;"> code promot validé <span class="reductionpercent" > </span> % de reduction sur le prix</small>
+                                                    <small class="codevalidationError ml-3" style="color: red;display: none;">code promo invalide ou expiré</small>
+                                                    <small class="codevalidationTrue ml-3" style="color: green;display: none;"> code promo validé <span class="reductionpercent" > </span> % de reduction sur le prix</small>
 
 
 
@@ -147,9 +147,19 @@
                                                     </div>
                                                     
                                                 </div>
+                                                <div class="row mb-2 confirm_passe" style="display: none;">
+                                                    <div class="col-md-12">
+                                                      <input type="text" class="form-control" name="nom_prenomconnecion" id="nom_prenomconnecion" placeholder="Nom et Prénom" value="" required>
+                                                    </div>
+                                                </div>
+                                                 <div class="row mb-2 confirm_passe" style="display: none;">
+                                                    <div class="col-md-12">
+                                                      <input type="text" class="form-control" name="villeconnexion" id="villeconnexion" placeholder="ville" value="" required>
+                                                    </div>
+                                                </div>
                                                  <div class="row mb-2">
                                                     <div class="col-md-12">
-                                                      <input type="text" class="form-control" name="numero" id="numeroconnexion" placeholder="Numéro de téléphone" value="" required>
+                                                      <input type="text" class="form-control" name="numeroconnexion" id="numeroconnexion" placeholder="Numéro de téléphone" value="" required>
                                                     </div>
                                                      
                                                 </div>
@@ -167,7 +177,7 @@
                                                     </div>
 
                                                 </div>
-                                               
+                                               <input type="text" hidden name="action" value="connect_user">
                                             </form>
 
                                             
@@ -205,6 +215,28 @@ swal("Oups!", "Nom, Numéro et adresse doivent être remplie  ", "error")
      sendForm(formData,messagesucess,rederecto,idprogress,url);  
 }
 
+})
+$(document).on("click",'#connexionValide',function(){
+var URLUSER=$('#URLUSER').val();
+var numero=$("#numeroconnexion").val();
+var passe=$("#mot_de_pase").val();
+var confirm_mot_de_passe=$("#confirm_mot_de_passe").val();
+
+if (passe==""|| numero==""){
+swal("Oups!", "informations inccorecte  ", "error")
+}else if (confirm_mot_de_passe!=passe && confirm_mot_de_passe!=""){
+  swal("Oups!", "Les mot de passe ne correspondesnt pas  ", "error")
+}else{
+   var myForm = document.querySelector('#connexion_form');
+   var formData= new FormData(myForm); 
+    $('.overflow').show(); 
+    var messagesucess="Votre achat à été enregistrer,  patientez quelque minute pour la validation par sms ou whatsapp!";
+    var rederecto='/user/'+numero;
+    var idprogress='#progresse';
+    var url=URLUSER;
+     connexion(formData,messagesucess,rederecto,idprogress,url);  
+}
 
 })
+
 </script>

@@ -1,3 +1,76 @@
+function connexion(formData,messagesucess,rederecto,idprogress,myurl){
+
+                $.ajax( {
+                    url        : myurl,
+                    type       : 'POST',
+                    cle        : 'action',
+                    contentType: false,
+                    cache      : false,
+                    processData: false,
+                    data       : formData,
+                    xhr        : function ()
+                    {
+                        var jqXHR = null;
+                        if ( window.ActiveXObject )
+                        {
+                            jqXHR = new window.ActiveXObject( "Microsoft.XMLHTTP" );
+                        }
+                        else
+                        {
+                            jqXHR = new window.XMLHttpRequest();
+                        }
+
+                        //Upload progress
+                        jqXHR.upload.addEventListener( "progress", function ( evt )
+                        {
+                            if ( evt.lengthComputable )
+                            {
+                                var percentComplete = Math.round( (evt.loaded * 100) / evt.total )-1;
+                                //Do something with upload progress
+                                 $(idprogress).css('width',percentComplete+"%");
+                                 $(idprogress).attr('aria-valuenow',percentComplete);
+                                
+
+                               
+                                 
+                                $(idprogress).html( percentComplete+"%");
+                                $(idprogress+"title").html( percentComplete+"%");
+                                console.log( 'Uploaded percent', percentComplete );
+                            }
+                        }, false );
+
+                        //Download progress
+                        jqXHR.addEventListener( "progress", function ( evt )
+                        {
+                            if ( evt.lengthComputable )
+                            {
+                                var percentComplete = Math.round( (evt.loaded * 100) / evt.total );
+                                
+                            }
+                        }, false );
+
+                        return jqXHR;
+                    },
+                    success    : function ( data )
+                    {
+                         var reponse  = data;
+                        //Do something success-ish
+                        
+                        if (reponse.response!="notExist_Or_invalide") {
+                            window.location.href=rederecto;
+                        }else{
+                            swal("Oups!", "veuillez  réessayer!", "error")
+                                .then((value) => {
+                                  //location.reload(true);
+                                });
+                            $('.overflow').hide();
+                        }
+
+                        
+                    }
+                } );
+}
+
 (function ($) {
     "use strict";
     function oraimolg_video() {
@@ -688,3 +761,5 @@
         }
     });
 })(jQuery); // End of use strict
+
+

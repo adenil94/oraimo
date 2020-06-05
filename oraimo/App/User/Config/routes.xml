@@ -2,9 +2,6 @@
 
 <routes> 
 
-	<route url="/user/compte" module="User" action="PageAjoutArticle" />
-	<route url="/crm-admin-oraimo/Ajoute-article" module="Crm" action="PageAjoutArticle" />
-
-	<route url="/" module="GestionMaison" action="Connexion" />
+	<route url="/user/(.*)" module="User" action="PageAjoutArticle" />
 
 </routes>

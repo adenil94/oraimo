@@ -2,9 +2,7 @@
 			<div class="nav-top">
 				<div class="container d-flex flex-row">
 					<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon">
-							<i class="icon-menu"></i>
-						</span>
+						<i class="fa fa-bars" aria-hidden="true" style="color: white"></i>
 					</button>
 					<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
 					<!-- Logo Header -->
@@ -71,7 +69,7 @@
 					<!-- End Navbar -->
 				</div>
 			</div>
-			<div class="container">
+			<div class="container" style="display: none;">
 				<div class="nav-bottom bg-white">
 					<h3 class="title-menu d-flex d-lg-none"> 
 						Menu 
@@ -174,4 +172,5 @@
 					</ul>
 				</div>
 			</div>
+
 		</div>

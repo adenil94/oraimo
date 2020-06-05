@@ -270,4 +270,41 @@ $(document).ready(function(){
 
 
 //Chart
+$(document).on("click",".edit",function(){
+	var nom=$(this).attr("data-nom");
+	var prix=$(this).attr("data-prix");
+	var description=$(this).attr("data-description");
+	var tag=$(this).attr("data-tag");
+	var idarticle=$(this).attr("data-idarticle");
 
+
+$("#nomEdit").val(nom);
+$("#prixedit").val(prix);
+$("#descriptionedit").val(description);
+$("#tagedit").val(tag);
+$("#idarticleedit").val(idarticle);
+
+ $("#modaleEdit").modal();
+});
+
+
+
+$( document).on( 'click','#enregistrerEdit', function (e)
+    {
+    e.preventDefault();
+	var Article = document.getElementsByName("nom");
+	var prix = document.getElementsByName("prix");
+    	if (Article=="" || prix=="" ) {
+    		swal("Oups!", "Rassurez-vous d'avoir renseigné  le nom, et le prix!", "error");
+    	}else{
+            
+            var myForm = document.querySelector('#newformdadaedit');
+            var formData= new FormData(myForm); 
+            var messagesucess="Enregistrement éffectué!";
+			var rederecto='/crm-admin-oraimo';
+			var idprogress='#progresse';
+			var url=URLARTICLE;
+			 sendForm(formData,messagesucess,rederecto,idprogress,url);
+           // console.log( file );
+       }
+    } );

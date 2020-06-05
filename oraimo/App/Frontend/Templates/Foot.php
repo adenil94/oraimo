@@ -1,5 +1,5 @@
  <input type="text" id="URLARTICLE"  hidden name="URLARTICLE" value="https://api.kitsmass.com/oraimo/article.php">
- <input type="text" id="URLUSER"  hidden name="URLARTICLE" value="https://api.kitsmass.com/oraimo/users.php">
+ <input type="text" id="URLUSER"  hidden name="URLARTICLE" value="http://kitmass.d.com/api/oraimo/users.php">
 <script src="/App/Frontend/Web/js/jquery-1.12.4.min.js"></script> 
 <script src="/App/Frontend/Web/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -28,4 +28,4 @@
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 
 <script src="/App/Frontend/Web/js/functions.js"></script>
-<script src="/App/Frontend/Web/js/oraimo.js?v74"></script>
+<script src="/App/Frontend/Web/js/oraimo.js?v72"></script>
