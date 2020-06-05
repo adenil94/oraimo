@@ -20,7 +20,9 @@ function dataArticle(){
 						data-tag="`+article[i].tag+`" 
 						data-description="`+article[i].description+`" 
 						data-idarticle="`+article[i].idarticle+`" 
-						class="btn btn-info edit">Modif</button> <button class="btn btn-danger del">del</button></td>
+						class="btn btn-info edit">Modif</button> <button class="btn btn-danger del"
+						 data-img="`+article[i].picture+`"
+						 data-idarticle="`+article[i].idarticle+`">del</button></td>
 					
 		  			`;
 		  }

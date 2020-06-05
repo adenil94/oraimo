@@ -308,3 +308,18 @@ $( document).on( 'click','#enregistrerEdit', function (e)
            // console.log( file );
        }
     } );
+$( document).on( 'click','.del', function (e)
+    {
+
+
+    e.preventDefault();
+	if (confirm("Voulz-vous vraiment supprimer cet article ? ")) {
+	var idArticle=$(this).attr("data-idarticle");
+	var picture=$(this).attr("data-img");
+        $.get( URLARTICLE, { action:"del_articles",identification: idArticle,img:picture } )
+      .done(function(data) {
+      	 location.reload(true);
+      });
+	}
+    } );
+
