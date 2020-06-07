@@ -2,6 +2,6 @@
 
 <routes> 
 
-	<route url="/user/(.*)" module="User" action="PageAjoutArticle" />
+	<route url="/user/(.*)" module="User" action="usercomte" />
 
 </routes>

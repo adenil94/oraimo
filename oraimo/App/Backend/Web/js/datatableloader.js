@@ -7,10 +7,13 @@ function dataArticle(){
 		 var count= article.length;
 		 var tr="";
 		  for (var i = 0 ; i < count; i++) {
+		  	var images=article[i].picture.split(";")
 		  	tr = tr +`<tr><td>`+article[i].nom+`</td>
 					<td>`+article[i].prix+`</td>
 					<td>`+article[i].tag+`</td>
-					<td>picture</td>
+					<td> <img class="img-responsive"
+                                             src="https://api.kitsmass.com/oraimo/img_article/`+images[0]+`"
+                                             alt="`+article[i].nom+`" width="100" height="78"></td>
 					<td>`+article[i].lien+`</td>
 					<td>`+article[i].description+`</td>
 					<td>
@@ -22,7 +25,7 @@ function dataArticle(){
 						data-idarticle="`+article[i].idarticle+`" 
 						class="btn btn-info edit">Modif</button> <button class="btn btn-danger del"
 						 data-img="`+article[i].picture+`"
-						 data-idarticle="`+article[i].idarticle+`">del</button></td>
+						 data-idarticle="`+article[i].idarticle+`">del</button></td></tr>
 					
 		  			`;
 		  }

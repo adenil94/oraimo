@@ -84,190 +84,121 @@ function sendForm(formData,messagesucess,rederecto,idprogress,myurl){
 	                    
 	                }
 	            } );
+};
+
+
+function getUserInf(numero){
+	var URLUSER=$('#URLUSER').val();
+	var tr="";
+    $.get( URLUSER, { action:"get_users",numero:numero } )
+    .done(function( data ) {
+        var response=data;
+         $(".overflow").hide();
+            if (response.response.user==false) {
+                 window.location.href="/";
+            }else{
+                $("#username").html(response.response.user.identifiant);
+                $("#iduser").html(response.response.user.idusers);
+                 var count= response.response.UserPromotion.length;
+                 var promotion =response.response.UserPromotion
+				  for (var i = 0 ; i < count; i++) {
+				  	
+				  	tr = tr +`<tr><td>`+i+`</td>
+							<td> <a class="btn btn-info" href="https://oraimo-bj.com/?`+promotion[i].codepromo+`" >Partager</a>
+							</td>
+							<td>`+promotion[i].date_debut+`</td>
+							<td>`+promotion[i].date_fin+` </td>
+							<td>`+promotion[i].codepromo+`</td>
+							<td>
+								<button
+								class="btn btn-info edit">Modif</button> <button class="btn btn-danger del"
+								data-idpromot="`+promotion[i].idcode_promo+`" >del</button></td></tr>
+				  			`;
+				  }
+				      	 $("#tablecodepromo").html(tr)
+		  $('#code_promotion').DataTable();
+            }
+
+           
+         }) 
+}
+function allpromotion(){
+	var URLUSER=$('#URLUSER').val();
+	var option="";
+    $.get( URLUSER, { action:"get_promotions"} )
+    .done(function( data ) {
+        var response=data.response;
+        var count= response.length;
+				  for (var i = 0 ; i < count; i++) {
+				  	
+				  	option = option +`<option value="`+response[i].idtype_promo+`-`+response[i].code+`"  >`+response[i].promotion+`</option>
+				  			`;
+				  }
+				 $("#selectFloatingLabel").html(option)  
+         }) 
+
 }
 
-// check empty input
-function checkEmptyInput(objet){
-  for (var i = 1; i < objet.length; i++) {
-    if (objet[i].value=="") {
-      
-      $("#AricleClone"+nombre).css("border","solid");
-      $("#AricleClone"+nombre).css("border-color ","#f83f37");
-      //$("html,body").animate({scrollTop: $("#AricleClone"+nombre).offset().top },500);
-      return false;
-      var nombre=i+1;
-    }
-  }
-  return true;
-}
-// for cloning artile 
-function cloneArticle(number){
 
-return `<div id="AricleClone`+number+`" class="row col-12" style="position: relative">
-			<button style="position: absolute; right: 0;z-index: 99;" class=" pull-right btn btn-danger supprimerClone" data-clone="AricleClone`+number+`" ><i class="fa fa-minus-square" aria-hidden="true"></i> supr.</button>
+var  users = window.location.pathname;
+var userInfo=users.split("/");
+var Numero=userInfo[2];
+getUserInf(Numero);
+allpromotion();
 
-			<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
-				<input id="nom`+number+`" type="text" name="nom[]" class="form-control input-border-bottom" required>
-				<label for="nom`+number+`" class="placeholder">Nom article `+number+`</label>
-			</div>
-			<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
-				<input id="prix`+number+`" type="text" name="prix[]" class="form-control input-border-bottom" required>
-				<label for="prix`+number+`" class="placeholder">Prix article `+number+`</label>
-			</div>
-			<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
-				<input id="description`+number+`" type="text" name="description[]" class="form-control input-border-bottom" required>
-				<label for="description`+number+`" class="placeholder">Description article `+number+`</label>
-			</div>
-			<div class="form-group form-floating-label col-md-4 col-12">
-				<input id="tag`+number+`" type="text" name="tag[]" class="form-control input-border-bottom" required>
-				<label for="tag`+number+`" class="placeholder">Tag article `+number+`</label>
-			</div>
-			<div class="form-group form-floating-label col-md-4 col-12">
-				<select class="form-control input-border-bottom " name="categorie[]" id="categorie`+number+`" required>
-					<option value="">&nbsp;</option>
-					<option>1</option>
-				</select>
-				<label for="categorie`+number+`" class="placeholder">Catégorie article `+number+`</label>
-			</div>
-			 <div class="col-md-4 col-12 row ">
-			 	<div class="col-4">
-			 		<label for="picture"><h4>Photos 1 <span style="color: red" >*</span> </h4></label>
-                     <div class = " row" id="addpicture`+number+`">
-                      <div class="divimag col-lg-3 col-md-6">
-                      <input type="file" hidden class="form-control" name="picture[]" id="files`+number+`1"  title="Selecte your files.">
-                        <li class="fa fa-plus filesview thumbnail" data-id="files`+number+`1" ></li>
-                         <img  class="filesviews " src = "https://via.placeholder.com/250"  id="viewfiles`+number+`1" alt = "Generic placeholder thumbnail">
-                      </div>
-                        
-                    </div>
-			 	</div>
-			 	<div class="col-4">
-			 		<label for="picture"><h4>Photos 2</h4></label>
-                     <div class = " row" id="addpicture`+number+`2">
-                      <div class="divimag col-lg-3 col-md-6">
-                      <input type="file" hidden class="form-control" name="picture[]" id="files`+number+`2"  title="Selecte your files.">
-                        <li class="fa fa-plus filesview thumbnail" data-id="files`+number+`2" ></li>
-                         <img  class="filesviews " src = "https://via.placeholder.com/250"  id="viewfiles`+number+`2" alt = "Generic placeholder thumbnail">
-                      </div>
-                        
-                    </div>
-			 	</div>
-			 	<div class="col-4">
-			 		<label for="picture"><h4>Photos 3</h4></label>
-                     <div class = " row" id="addpicture`+number+`">
-                      <div class="divimag col-lg-3 col-md-6">
-                      <input type="file" hidden class="form-control" name="picture[]" id="files`+number+`3"  title="Selecte your files.">
-                        <li class="fa fa-plus filesview thumbnail" data-id="files`+number+`3" ></li>
-                         <img  class="filesviews " src = "https://via.placeholder.com/250"  id="viewfiles`+number+`3" alt = "Generic placeholder thumbnail">
-                      </div>
-                        
-                    </div>
-			 	</div>
-                  
-        		</div>
-		</div>
-		<hr class="hrAricleClone`+number+`">`;
-}
-// clone article
-  $(document).on('click','#AddMoreArticle',function(e){
-  	e.preventDefault();
-  	var nombre =$(this).attr("data-number");
-  	nombre=parseInt(nombre)+1;
-  	if (nombre < 11) {
-  	 $(cloneArticle(nombre)).hide().appendTo(".alldivClone").show("slow");
-  	 $(".input_tags").select2({
-    tags: true,
-    tokenSeparators: [',', ' ']
-});
-  	 $(".countNumber").html("( "+nombre+" )");
-  	 
-  	 $(this).attr("data-number",nombre);
-  	 $("html,body").animate({scrollTop: $('#AddMoreArticle').offset().top },1500);
-  	}else{
-  		swal("Oups!", "Vous ne pouvez ajouter plus de 10 articles à la fois merci!", "error")
-  	}
-  	
-  });
 
-// supremer element cloner 
-  $(document).on('click','.supprimerClone',function(e){
-  	e.preventDefault();
-  	var cloneTodelete =$(this).attr("data-clone");
 
-  	$("#"+cloneTodelete).hide('slow', function(){ $("#"+cloneTodelete).remove(); });
-  	$(".hr"+cloneTodelete).hide();
-  	console.log($("#hr"+cloneTodelete));
-  	
-  	var nombre =$('#AddMoreArticle').attr("data-number");
-  	  	 nombre=parseInt(nombre)-1;
-  	 $('#AddMoreArticle').attr("data-number",nombre);
+$(document).on("change","#selectFloatingLabel",function(){
 
-  	 $(".countNumber").html("( "+nombre+" )");
-  });
+	var valeur=$('#selectFloatingLabel').val();
+	var code = valeur.split("-");
 
- // save article
-   $( document).on( 'click','#enregistrer', function (e)
-        {
-        e.preventDefault();
-		var Article = document.getElementsByName("article[]");
-		var prix = document.getElementsByName("prix[]");
-		var categories = document.getElementsByName("categories[]");
-        	if (checkEmptyInput(Article)==false|| checkEmptyInput(categories) ==false || checkEmptyInput(prix)==false   ) {
-        		swal("Oups!", "Rassurez-vous d'avoir renseigné  le nom, la catégorie et le prix de chaque article!", "error");
-        	}else{
-	            $('.overflow').show();
-	            var myForm = document.querySelector('#newformdada');
-	            var formData= new FormData(myForm); 
-	            var messagesucess="Enregistrement éffectué!";
-				var rederecto='/crm-admin-oraimo/Ajoute-article';
-				var idprogress='#progresse';
-				var url=URLARTICLE;
-				 sendForm(formData,messagesucess,rederecto,idprogress,url);
-	           // console.log( file );
-	       }
-        } );
-// add aticle image
-$(document).ready(function(){
-	/*Disabled*/
-	$(document).on('click','.filesview', function () {
-      var file=$(this).attr('data-id');
-      var   filesview='#view'+file;
-          file='#'+file;
-        $(file).trigger('click');
-        viewimage(file,filesview);
-    $(this).removeClass('fa-plus filesview');
-        $(this).addClass('fa-minus close ');
-    });
-      $(document).on('click','.close',function(){
-      var file=$(this).attr('data-id');
-      var   filesview='#view'+file;
-          file='#'+file;      
-    $(this).removeClass('fa-minus close');
-        $(this).addClass('fa-plus filesview');
-        var file=$(this).attr('data-id');
-      	var filesview='#view'+file;
-          	file='#'+file;
-        var el=  $(file);
-         	el.wrap('<form>').closest('form').get(0).reset();
-      		el.unwrap();
-        $(filesview).attr('src','https://via.placeholder.com/250');
-      })
-
-      function viewimage(file,filesview){
-    $(document).on('change',file,function(){
-    var oFReader = new FileReader();
-    oFReader.readAsDataURL((this).files[0]);
-    oFReader.onload = function (oFREvent) {
-        $(filesview).attr('src',oFREvent.target.result);
-    };
-    });
-}
+	var codes=$('#codePromot').html(code[1]);
+	var nom=$("#username").html();
+	var nomcodvar=nom.split(" ");
+	var name=nomcodvar[0];
+	$(".cosdeinoute").val(name.toUpperCase());
+	
+	;
+	
 });
 
 
+$(document).on("click",".creercode",function(){
 
-// JQVmap
+	var valeur=$('#selectFloatingLabel').val();
+	var code = valeur.split("-");
+	var nom=$("#username").html();
+	var nomcodvar=nom.split(" ");
+	var name=nomcodvar[0];
+
+	var id=code[0];
+	var usercode=name.toUpperCase()+code[1];
+	var iduser=$("#iduser").html();
+	var URLUSER=$('#URLUSER').val();
+	    $.get( URLUSER, { action:"set_user_promo_code",idpromot:id,code:usercode,user:iduser} )
+    .done(function( data ) {
+        var response=data.response;
+        if (response=true) {}
+ 			location.reload();
+         }) 
+	
+});
 
 
-//Chart
+$( document).on( 'click','.del', function (e)
+    {
+var URLUSER=$('#URLUSER').val();
+
+    e.preventDefault();
+	if (confirm("Voulz-vous vraiment supprimer ce code promo  ? ")) {
+	var idpromot=$(this).attr("data-idpromot");
+	var picture=$(this).attr("data-img");
+        $.get( URLUSER, { action:"del_user_promo_code",idpromot: idpromot } )
+      .done(function(data) {
+      	 location.reload(true);
+      });
+	}
+    } );
+
 

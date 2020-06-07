@@ -32,7 +32,7 @@ class UserController extends BackController
  * @route /crm-admin-oraimo/Ajoute-article
  * @Copyright (c) Oraimo, 2020
  */
-  public function executePageAjoutArticle(HTTPRequest $request)
+  public function executeUsercomte(HTTPRequest $request)
   {
     
   }

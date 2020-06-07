@@ -8,6 +8,8 @@
 <?php include 'Header.php';?>
  <?php include 'Foot.php';?>
    <body >
+ <?php include 'loaderInPage.php';?>
+
      <div class="wrapper horizontal-layout-2">
 
               <?php include 'Navbar.php';?>
