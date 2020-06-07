@@ -4,6 +4,8 @@
 
 	<route url="/crm-admin-oraimo" module="Crm" action="PageDacceuilArticleTable" />
 	<route url="/crm-admin-oraimo/Ajoute-article" module="Crm" action="PageAjoutArticle" />
+	<route url="/crm-admin-oraimo/promotion" module="Crm" action="Promotion" />
+	<route url="/crm-admin-oraimo/commande" module="Crm" action="Commande" />
 
 	<route url="/" module="GestionMaison" action="Connexion" />
 

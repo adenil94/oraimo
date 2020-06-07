@@ -126,7 +126,7 @@
 							<div class="navbar-dropdown animated fadeIn">
 								<ul>
 									<li>
-										<a href="">Toute les commandes</a>
+										<a href="/crm-admin-oraimo/commande">Toute les commandes</a>
 									</li>
 									<li>
 										<a href="">Commandes en cours</a>
