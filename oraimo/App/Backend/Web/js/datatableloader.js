@@ -70,3 +70,32 @@ function datacommande(){
 		})
 
 }
+
+
+function datapromotion(){
+	var URLUSER=$('#URLUSER').val();
+	$.get( URLUSER, { action:"get_promotions" } )
+	.done(function( data ) {
+		 // var response=JSON.parse(data);
+		 var promotion=data.response;
+		 var count= promotion.length;
+		 var tr="";
+		  for (var i = 0 ; i < count; i++) {
+		  	tr = tr +`<tr>
+                    <td>`+promotion[i].promotion+`</td>
+					<td>`+promotion[i].detail+`</td>
+					<td>`+promotion[i].reduction+`</td>
+					<td>`+promotion[i].date_debut+`</td>
+					<td>`+promotion[i].date_fin+`</td>
+					<td>`+promotion[i].code+`</td>
+
+					<td> <button class="btn btn-info terminatePromotion"
+						 data-idpromotion="`+promotion[i].idtype_promo+`">terminer </button></td></tr>
+					
+		  			`;
+		  }
+		  $("#tablepromotionbody").html(tr);
+		  $('#tablepromotion').DataTable();
+		})
+
+}

@@ -149,10 +149,10 @@
 							<div class="navbar-dropdown animated fadeIn">
 								<ul>
 									<li>
-										<a href="">Création</a>
+										<a href="/crm-admin-oraimo/promotion">Création</a>
 									</li>
 									<li>
-										<a href="">Liste des promotions</a>
+										<a href="/crm-admin-oraimo/Liste-promotion">Liste des promotions</a>
 									</li>
 									
 								</ul>

@@ -47,6 +47,19 @@ class CrmController extends BackController
   {
     
   }
+
+   /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Promotion
+ * @Copyright (c) Oraimo, 2020
+ */
+  public function executePromotionTable(HTTPRequest $request)
+  {
+    
+  }
+
+  
    /**
  * @license Oraimo License
  * @author Andil ADEBIYI <andiladebiyi@gmail.com>

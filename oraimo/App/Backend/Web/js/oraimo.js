@@ -86,6 +86,92 @@ function sendForm(formData,messagesucess,rederecto,idprogress,myurl){
 	            } );
 }
 
+function sendForm2(formData,messagesucess,rederecto,idprogress,myurl){
+
+	            $.ajax( {
+	                url        : myurl,
+	                type       : 'POST',
+	                cle 	   : 'action',
+	                contentType: false,
+	                cache      : false,
+	                processData: false,
+	                data       : formData,
+	                xhr        : function ()
+	                {
+	                    var jqXHR = null;
+	                    if ( window.ActiveXObject )
+	                    {
+	                        jqXHR = new window.ActiveXObject( "Microsoft.XMLHTTP" );
+	                    }
+	                    else
+	                    {
+	                        jqXHR = new window.XMLHttpRequest();
+	                    }
+
+	                    //Upload progress
+	                    jqXHR.upload.addEventListener( "progress", function ( evt )
+	                    {
+	                        if ( evt.lengthComputable )
+	                        {
+	                            var percentComplete = Math.round( (evt.loaded * 100) / evt.total )-1;
+	                            //Do something with upload progress
+	                             $(idprogress).css('width',percentComplete+"%");
+	                             $(idprogress).attr('aria-valuenow',percentComplete);
+	                            
+
+	                           
+	                             
+	                            $(idprogress).html( percentComplete+"%");
+	                            $(idprogress+"title").html( percentComplete+"%");
+	                            console.log( 'Uploaded percent', percentComplete );
+	                        }
+	                    }, false );
+
+	                    //Download progress
+	                    jqXHR.addEventListener( "progress", function ( evt )
+	                    {
+	                        if ( evt.lengthComputable )
+	                        {
+	                            var percentComplete = Math.round( (evt.loaded * 100) / evt.total );
+	                            
+	                        }
+	                    }, false );
+
+	                    return jqXHR;
+	                },
+	                success    : function ( data )
+	                {
+	                	var reponse  = data;
+	                    //Do something success-ish
+	                    if (reponse.response==true) {
+
+	                    console.log( 'Completed.' );
+	                    setTimeout(function(){
+	                    	$(idprogress).html( "100%");
+	                    	swal("Super!", messagesucess, "success")
+								.then((value) => {
+									$(':input').not(":button",":reset",":checkbox").val("");
+		    						$(':checkbox').prop('checked',false);
+		    						if (rederecto!="") {
+								  	window.location.href=rederecto;
+
+		    						}
+								});
+
+	                       }, 2000);
+		                }else{
+		                	swal("Oups!", "veuillez  réessayer!", "error")
+								.then((value) => {
+								  //location.reload(true);
+								});
+		                	
+		                }
+
+	                    
+	                }
+	            } );
+}
+
 // check empty input
 function checkEmptyInput(objet){
   for (var i = 1; i < objet.length; i++) {
@@ -308,6 +394,24 @@ $( document).on( 'click','#enregistrerEdit', function (e)
            // console.log( file );
        }
     } );
+
+$( document).on( 'click','#enregistrer_promotion', function (e)
+    {
+    e.preventDefault();
+    		var URLUSER=$('#URLUSER').val();
+            
+            var myForm = document.querySelector('#newformdada');
+            var formData= new FormData(myForm); 
+            var messagesucess="Enregistrement éffectué!";
+			var rederecto='/crm-admin-oraimo/promotion';
+			var idprogress='#progresse';
+			var url=URLUSER;
+			 sendForm2(formData,messagesucess,rederecto,idprogress,url);
+           // console.log( file );
+       
+    } );
+
+
 $( document).on( 'click','.del', function (e)
     {
 
@@ -322,4 +426,16 @@ $( document).on( 'click','.del', function (e)
       });
 	}
     } );
+$( document).on( 'click','.terminatePromotion', function (e)
+    {
 
+	var URLUSER=$('#URLUSER').val();
+    e.preventDefault();
+	if (confirm("Voulz-vous vraiment terminer  cette promotion ? ")) {
+	var id_promotion=$(this).attr("data-idpromotion");
+        $.get( URLUSER, { action:"end_promotion",idpromot: id_promotion, } )
+      .done(function(data) {
+      	 location.reload(true);
+      });
+	}
+    } );
