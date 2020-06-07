@@ -45,7 +45,7 @@
 									</a>
 									<ul class="dropdown-menu dropdown-user animated fadeIn">
 										<div class="dropdown-user-scroll scrollbar-outer">
-											<li>
+											<li style="display: none;">
 												<div class="user-box">
 													<div class="avatar-lg"></div>
 													<div class="u-text">
@@ -55,9 +55,9 @@
 												</div>
 											</li>
 											<li>
-												<a class="dropdown-item" href="#">Paramètre</a>
+												<a class="dropdown-item" href="#" style="display: none;">Paramètre</a>
 												<div class="dropdown-divider"></div>
-												<a class="dropdown-item" href="#">Fermer</a>
+												<a class="dropdown-item out" href="#">Fermer</a>
 											</li>
 										</div>
 									</ul>

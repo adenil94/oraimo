@@ -201,4 +201,8 @@ var URLUSER=$('#URLUSER').val();
 	}
     } );
 
+$( document).on( 'click','.out', function (e)
+    {
+ window.location.href="/";
+    } );
 

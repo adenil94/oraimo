@@ -1,5 +1,5 @@
  <input type="text" id="URLARTICLE"  hidden name="URLARTICLE" value="https://api.kitsmass.com/oraimo/article.php">
- <input type="text" id="URLUSER"  hidden name="URLARTICLE" value="http://kitmass.d.com/api/oraimo/users.php">
+ <input type="text" id="URLUSER"  hidden name="URLARTICLE" value="https://api.kitsmass.com/oraimo/users.php">
 <script src="/App/Frontend/Web/js/jquery-1.12.4.min.js"></script> 
 <script src="/App/Frontend/Web/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

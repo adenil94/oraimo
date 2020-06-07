@@ -17,7 +17,7 @@ class UserAutoload {
     }
 
     static function userFronClass($classname) {
-        $file = 'App/User/Modules/user/'.$classname .'.php';
+        $file = 'App/User/Modules/User/'.$classname .'.php';
         if (file_exists($file)) {
             require_once $file;
         }
