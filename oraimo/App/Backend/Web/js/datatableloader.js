@@ -45,12 +45,16 @@ function datacommande(){
 		 var count= commande.length;
 		 var tr="";
 		  for (var i = 0 ; i < count; i++) {
-		  	var images=commande[i].picture.split(";")
+		  	var images=commande[i].picture.split(";");
+		  	var prixReduit= parseInt(commande[i].prix) -(parseInt(commande[i].prix)* commande[i].reduction/100);
 		  	tr = tr +`<tr><td> <img class="img-responsive"
                                              src="https://api.kitsmass.com/oraimo/img_article/`+images[0]+`"
                                              alt="`+commande[i].nom+`" width="100" height="78"></td>
                     <td>`+commande[i].nom+`</td>
 					<td>`+commande[i].prix+`</td>
+					<td>`+commande[i].promotion+`</td>
+					<td>`+commande[i].codepromo+`</td>
+					<td>`+prixReduit+`</td>
 					<td>`+commande[i].description+`</td>
 					<td>`+commande[i].date+`</td>
 					<td>`+commande[i].reference+`</td>

@@ -144,4 +144,4 @@
 
 	<script src="/App/Backend/Web/js/oraimos.js"></script>
 
-	<script src="/App/Backend/Web/js/datatableloader.js"></script>
+	<script src="/App/Backend/Web/js/datatableloader.js?v2"></script>

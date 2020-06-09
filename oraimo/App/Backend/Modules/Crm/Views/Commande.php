@@ -1,3 +1,10 @@
+		
+<style type="text/css">
+	.main-panel {
+     max-width: inherit!important; 
+
+}
+</style>
 		<div class="main-panel">
 			<div class="content">
 				<div class="page-inner">
@@ -25,7 +32,7 @@
 					</div>
 					<div class="page-category">
 						<div class="content content-full">
-							<div class="page-navs bg-white">
+							<div class="page-navs bg-white" style="overflow-y: auto;">
 								<div class="nav-scroller">
 									<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
 										<a class="nav-link active show" data-toggle="tab" href="#tab1">Lites des Commandes
@@ -41,6 +48,9 @@
 													<th>image</th>
 													<th>article</th>
 													<th>prix</th>
+													<th>Promotion</th>
+													<th>Code Promo</th>
+													<th>prix reduit</th>
 													<th>description</th>
 													<th>date</th>
 													<th>paiement</th>
