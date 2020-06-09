@@ -4,14 +4,14 @@
         } 
     </style>
     <div class="banner-wrapper has_background">
-        <img src="/App/Frontend/Web/images/banner-for-all2.jpg"
+        <img src="/App/Frontend/Web/images/banner-for-all.jpg"
              class="img-responsive attachment-1920x447 size-1920x447" alt="img">
         <div class="banner-wrapper-inner">
-            <h1 class="page-title container">Article</h1>
+            <h1 class="page-title container" style="color: white"></h1>
             <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs container">
                 <ul class="trail-items breadcrumb">
-                    <li class="trail-item trail-begin"><a href="index-2.html"><span>Acceuil</span></a></li>
-                    <li class="trail-item trail-end active"><span>Article</span>
+                    <li class="trail-item trail-begin"><a href="#" style="color: white"><span>Acceuil</span></a></li>
+                    <li class="trail-item trail-end active"><span style="color: white">Article</span>
                     </li>
                 </ul>
             </div>

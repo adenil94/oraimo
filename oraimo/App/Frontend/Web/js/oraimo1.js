@@ -1,7 +1,4 @@
- code = window.location.pathname
- code_promo=code.split("/");
- code_promo=code_promo[1];
-checkcodePromotion(code_promo)
+
 function checkcodePromotion(code_promo){
     var URLUSER=$('#URLUSER').val();
     $.get( URLUSER, { action:"check_code",code:code_promo } )
@@ -15,12 +12,19 @@ function checkcodePromotion(code_promo){
                  }else{
 
                     $(".codevalidationError").show();
+                    $(".codevalidationTrue").hide();
+
                  }
                  $(".reductionpercent").html("0");
             }else{
                  $("#code_promot").val(code_promo);
                 $(".codevalidationTrue").show();
+                    $(".codevalidationError").hide();
+
                 $(".reductionpercent").html(response.response.reduction);
+                $(".reductionpercent").attr("data-reduce",response.response.reduction);
+                var prix =  parseInt($(".prixProduit").html()) - (parseInt( response.response.reduction) * parseInt($(".prixProduit").html()) /100);
+                $(".prixReduction").html(prix+" FCFA");
             }
          }) 
  }
@@ -223,8 +227,14 @@ function sendForm(formData,messagesucess,rederecto,idprogress,myurl){
 
 $(document).on("click",".whatsapp",function(){
    var nomArticle= $(this).attr("data-nomarticle");
-    window.open("https://wa.me/22999915230/?text=Salut! j'ai vu cet article "+nomArticle+"  sur https://www.oraimo-bj.com/, j'aimerais avoir plus d'informations.", '_blank');
+    window.open("https://wa.me/22991794250/?text=Salut! j'ai vu cet article "+nomArticle+"  sur https://www.oraimo-bj.com/, j'aimerais avoir plus d'informations.", '_blank');
 })
+$(document).on("click",".partage",function(){
+   var nomArticle= $(this).attr("data-nomarticle");
+    window.open("whatsapp://send?text=commande avec ce via ce lien et bénéficie d'une reduction de 15%  https://www.oraimo-bj.com/", '_blank');
+})
+
+
 $(document).on("click","#mode-grid",function(){
 	$(this).addClass("active");
 	$("#mode-list").removeClass("active");
@@ -284,9 +294,7 @@ $(document).on("click",".remove_from_cart_button",function(){
 
 // losque l'utilisateur choisis le produit a acheter
 $(document).on("click",'.acherter',function(){
-
-    var prix =  parseInt($(this).attr("data-prix")) - (parseInt($(".reductionpercent").html()) * parseInt($(this).attr("data-prix")) /100);
-    var name_price=" Article: <small style='color:#8ec31f' >"+$(this).attr("data-nom")+"  "+prix+" FCFA</small>";
+    var name_price=" Article: <small style='color:#8ec31f'>"+$(this).attr("data-nom")+" <span class='prixProduit'> "+$(this).attr("data-prix")+"</span> </span> FCFA</small> ";
     $(".article_acheter").val($(this).attr("data-id"))
     $(".produit_paiment").html(name_price);
     $("#achertermodal").modal();
@@ -322,4 +330,8 @@ $(document).on("change",".connexion",function(){
     } 
 })
 
+$(document).on("input","#code_promot",function(){
+   var code_promo=$("#code_promot").val();
+    checkcodePromotion(code_promo);
+})
 

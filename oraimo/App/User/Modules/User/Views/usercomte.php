@@ -109,7 +109,7 @@
 							<div class="page-navs bg-white">
 								<div class="nav-scroller">
 									<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
-										<a class="nav-link active show" data-toggle="tab" href="#tab1">Lites de vos liens
+										<a class="nav-link active show" data-toggle="tab" href="#tab1">Listes de vos liens
 											<span class="count ml-1"></span>
 										</a>
 										
@@ -161,7 +161,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crée votre code de partage</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Créer votre code de partage</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -177,7 +177,7 @@
 											<option>4</option>
 											<option>5</option>
 										</select>
-										<label for="selectFloatingLabel" class="placeholder">Choisire une promotion</label>
+										<label for="selectFloatingLabel" class="placeholder">Choisir une promotion</label>
 									</div>
 											<div class="form-group">
 												<div class="input-group mb-3">

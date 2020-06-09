@@ -124,7 +124,7 @@ function getUserInf(numero){
 }
 function allpromotion(){
 	var URLUSER=$('#URLUSER').val();
-	var option="";
+	var option="<option value='CODE-CODE' selected >choisir une promotion </option>";
     $.get( URLUSER, { action:"get_promotions"} )
     .done(function( data ) {
         var response=data.response;
