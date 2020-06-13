@@ -28,4 +28,4 @@
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 
 <script src="/App/Frontend/Web/js/functions.js"></script>
-<script src="/App/Frontend/Web/js/oraimo1.js?v79"></script>
+<script src="/App/Frontend/Web/js/oraimo2.js?v79"></script>

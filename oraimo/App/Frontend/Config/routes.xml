@@ -2,8 +2,8 @@
 
 <routes> 
 	<route url="/" module="oraimo" action="Index" />
-	<route url="/(.*)" module="oraimo" action="Index" />
-	<route url="/Article-(.*)-([0-9]+)" module="oraimo" action="simple" vars="lien,id" ></route>
-	<route url="/Article-(.*)-([0-9]+)/(.*)" module="oraimo" action="simple" vars="lien,id" ></route>
+	<route url="/(.*)=(.*)" module="oraimo" action="Index" />
+	<route url="/a/(.*)-([0-9]+)" module="oraimo" action="simple" vars="lien,id" ></route>
+	<route url="/a/(.*)-([0-9]+)/(.*)" module="oraimo" action="simple" vars="lien,id" ></route>
 
 </routes>

@@ -142,6 +142,6 @@
 
 	<!-- Millenium DEMO methods, don't include it in your project! -->
 
-	<script src="/App/Backend/Web/js/oraimos.js"></script>
+	<script src="/App/Backend/Web/js/oraimos2.js"></script>
 
 	<script src="/App/Backend/Web/js/datatableloader.js?v2"></script>

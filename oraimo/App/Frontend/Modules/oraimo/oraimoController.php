@@ -12,7 +12,7 @@ class oraimoController extends BackController
 
   public function executesimple(HTTPRequest $request)
   {
-  		  $urlapi="https://api.kitsmass.com/oraimo/article.php";
+  		  $urlapi="http://api.kitsmass.com/oraimo/article.php";
   		 // $urlapi="http://kitmass.d.com/api/oraimo/article.php";
       $id= urldecode($request->getData('id')) ;
   		$lien= urldecode($request->getData('lien')) ;
@@ -41,10 +41,6 @@ $this->page->addVar('descriptionMeta',$description);
 $this->page->addVar('titleMeta',$name);
 $this->page->addVar('urlMeta',"https://oraimo.kitsmass.com/Article-".$lien."-".$id);
 $this->page->addVar('imageMeta',$images);
-
-
-
-
 
   } 
 

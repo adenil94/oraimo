@@ -1,4 +1,5 @@
 
+
 function checkcodePromotion(code_promo){
     var URLUSER=$('#URLUSER').val();
     $.get( URLUSER, { action:"check_code",code:code_promo } )
@@ -46,7 +47,7 @@ function dataArticle(){
                             <div class="product-inner tooltip-left">
 
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="/Article-`+article[i].lien+`-`+article[i].idarticle+`">
+                                    <a class="thumb-link" href="/a/`+article[i].lien+`-`+article[i].idarticle+`">
                                         <img class="img-responsive"
                                              src="`+urlimage+`/`+images[0]+`"
                                              alt="`+article[i].nom+`" width="600" height="778">
@@ -56,7 +57,7 @@ function dataArticle(){
 
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
-                                        <a href="/Article-`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
+                                        <a href="/a/`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
                                        <br> <span class="price"><span class="kobolg-Price-amount amount">
                                         <span
                                             class="kobolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA</span>
@@ -88,7 +89,7 @@ function dataArticle(){
                             data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner images">
                                 <div class="product-thumb">
-                                    <a class="thumb-link" href="/Article-`+article[i].lien+`-`+article[i].idarticle+`">
+                                    <a class="thumb-link" href="/a/`+article[i].lien+`-`+article[i].idarticle+`">
                                         <img class="img-responsive"
                                              src="`+urlimage+`/`+images[0]+`"
                                              alt="Modern Watches" width="600" height="778">
@@ -96,7 +97,7 @@ function dataArticle(){
                                 </div>
                                 <div class="product-info">
                                     <h3 class="product-name product_title">
-                                        <a href="/Article-`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
+                                        <a href="/a/`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
                                     </h3>
                                     <span class="price"> <span
                                             class="oraimolg-Price-amount amount"><span

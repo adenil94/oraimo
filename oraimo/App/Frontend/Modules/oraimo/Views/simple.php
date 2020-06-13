@@ -63,7 +63,7 @@
                                         <button class='btn btn-sm btn-info acherter '
                                          data-nom="<?=$name?>" data-prix="<?=$prix?>"     
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
-                                        Acherter</button>
+                                        Acheter</button>
                                     </div>
                         </div>
 
