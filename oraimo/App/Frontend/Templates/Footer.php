@@ -57,8 +57,14 @@
                                             Informations d'achat
                                         </h3>
                                             <span class="produit_paiment"></span>  
-                                        <ul class="oraimolg-mini-cart cart_list product_list_widget">
+                                        <ul class="oraimolg-mini-cart cart_list ">
                                             <form class="needs-validation " id="valide_achat_form" >
+                                               <div class="row mb-2">
+                                                    <div class="col-md-12">
+                                                    <small>Quantité</small>
+                                                      <input type="number" class="form-control" name="quantite" id="quantite" placeholder="Quantité" value="1" required>
+                                                    </div>
+                                                </div>
                                                 <div class="row mb-2">
                                                     <div class="col-md-12">
                                                       <input type="text" class="form-control" name="nom_prenom" id="nom_prenom" placeholder="Nom et Prénom" value="" required>
@@ -66,7 +72,7 @@
                                                 </div>
                                                  <div class="row mb-2">
                                                     <div class="col-md-12">
-                                                      <input type="text" class="form-control" name="numero" id="numero" placeholder="Numéro de téléphone" value="" required>
+                                                      <input type="text" class="form-control" name="numero" id="numero" placeholder="Numéro de téléphone" value="" required maxlength="8">
                                                     </div>
                                                      
                                                 </div>
@@ -103,21 +109,19 @@
                                                 </div>
                                                 <div class="row mb-2 ref_paiement" style="display: none;" >
                                                     <div class="col-md-12">
-                                                      <input type="text" class="form-control" name="ref_paiement" id="ref_paiement" placeholder="Référence de paiement MOMO" value="" required>
+                                                      <input type="text" class="form-control" name="ref_paiement" id="ref_paiement" placeholder="Référence de paiement MOMO" value="" required minlength="8" maxlength="8">
                                                       <small>Numéro d'envoie : 66523726</small>
                                                     </div>
-
                                                 </div>
                                                  <input type="text" hidden name="action" value="comande_user">
                                                  <input type="text" class="article_acheter" hidden name="article"  value="">
+                                                <input type="text" class="Nom_save_article" hidden name="Nom_save_article" value="">
                                             </form>
 
                                             
                                         </ul>
                                         <small><a href="#" data-toggle="modal" data-target="#termconditionUtilisation" >Conditions générales d'utilisation</a></small> <br>
                                          <small><a href="#" data-toggle="modal" data-target="#vente_apropo" >Paiement & livraison</a></small>
-
-                                        
                                             <button class="btn btn-info " id="Valide" style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;">Valider</button>
                                         
                                     </div>
@@ -186,6 +190,8 @@
 
                                                 </div>
                                                <input type="text" hidden name="action" value="connect_user">
+                                               
+
                                             </form>
 
                                             
@@ -340,11 +346,16 @@ $(document).on("click",'#Valide',function(){
 var URLUSER=$('#URLUSER').val();
 var nom_prenom=$("#nom_prenom").val();
 var numero=$("#numero").val();
+var quantite=$("#quantite").val();
 var ville_quartier=$("#ville_quartier").val();
+var code_promot=$("#code_promot").val();
 
-if (nom_prenom==""|| numero==""|| ville_quartier==""){
-swal("Oups!", "Nom, Numéro et adresse doivent être remplie  ", "error")
-}else{
+if (nom_prenom==""|| numero==""|| ville_quartier=="" || quantite==""){
+swal("Oups!", "la quantité, le Nom, Numéro et adresse doivent être remplie  ", "error")
+}else if(code_promot==""){
+swal("Oups!", "Appliquer le code promo ci-dessus  ", "error");
+} 
+else{
      var myForm = document.querySelector('#valide_achat_form');
    var formData= new FormData(myForm); 
     $('.overflow').show(); 
@@ -365,7 +376,7 @@ var confirm_mot_de_passe=$("#confirm_mot_de_passe").val();
 if (passe==""|| numero==""){
 swal("Oups!", "informations inccorecte  ", "error")
 }else if (confirm_mot_de_passe!=passe && confirm_mot_de_passe!=""){
-  swal("Oups!", "Les mot de passe ne correspondesnt pas  ", "error")
+  swal("Oups!", "Les mots de passe ne correspondent pas  ", "error")
 }else{
    var myForm = document.querySelector('#connexion_form');
    var formData= new FormData(myForm); 

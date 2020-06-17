@@ -275,6 +275,8 @@ return `<div id="AricleClone`+number+`" class="row col-12" style="position: rela
   	
   });
 
+
+
 // supremer element cloner 
   $(document).on('click','.supprimerClone',function(e){
   	e.preventDefault();
@@ -414,8 +416,6 @@ $( document).on( 'click','#enregistrer_promotion', function (e)
 
 $( document).on( 'click','.del', function (e)
     {
-
-
     e.preventDefault();
 	if (confirm("Voulz-vous vraiment supprimer cet article ? ")) {
 	var idArticle=$(this).attr("data-idarticle");
@@ -426,6 +426,8 @@ $( document).on( 'click','.del', function (e)
       });
 	}
     } );
+
+
 $( document).on( 'click','.terminatePromotion', function (e)
     {
 
@@ -434,6 +436,38 @@ $( document).on( 'click','.terminatePromotion', function (e)
 	if (confirm("Voulz-vous vraiment terminer  cette promotion ? ")) {
 	var id_promotion=$(this).attr("data-idpromotion");
         $.get( URLUSER, { action:"end_promotion",idpromot: id_promotion, } )
+      .done(function(data) {
+      	 location.reload(true);
+      });
+	}
+    } );
+
+  
+ 
+$( document).on( 'click','.AnnuleComande', function (e)
+    {
+    e.preventDefault();
+    var URLUSER=$('#URLUSER').val();
+    console.log(URLUSER);
+	if (confirm("Voulz-vous vraiment annuler cet commande ? ")) {
+	var idArticle=$(this).attr("data-idarticle");
+	var picture=$(this).attr("data-img");
+        $.get( URLUSER, { action:"cancel_commande",identification: idArticle } )
+      .done(function(data) {
+      	// location.reload(true);
+      });
+	}
+    } );
+
+$( document).on( 'click','.endcomande', function (e)
+    {
+    e.preventDefault();
+    var URLUSER=$('#URLUSER').val();
+    console.log(URLUSER);
+	if (confirm("Voulz-vous vraiment terminer cet commande ? ")) {
+	var idArticle=$(this).attr("data-idarticle");
+	var picture=$(this).attr("data-img");
+        $.get( URLUSER, { action:"end_commande",identification: idArticle } )
       .done(function(data) {
       	 location.reload(true);
       });

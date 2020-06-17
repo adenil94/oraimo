@@ -36,6 +36,7 @@ function dataArticle(){
 }
 
 
+
 function datacommande(){
 	var URLUSER=$('#URLUSER').val();
 	$.get( URLUSER, { action:"get_commande" } )
@@ -46,12 +47,14 @@ function datacommande(){
 		 var tr="";
 		  for (var i = 0 ; i < count; i++) {
 		  	var images=commande[i].picture.split(";");
-		  	var prixReduit= parseInt(commande[i].prix) -(parseInt(commande[i].prix)* commande[i].reduction/100);
+		  	var prixReduit= parseInt(commande[i].quantite) * (parseInt(commande[i].prix) -(parseInt(commande[i].prix)* commande[i].reduction/100));
 		  	tr = tr +`<tr><td> <img class="img-responsive"
                                              src="https://api.kitsmass.com/oraimo/img_article/`+images[0]+`"
                                              alt="`+commande[i].nom+`" width="100" height="78"></td>
+                    <td>`+commande[i].numerocommande+`</td>
                     <td>`+commande[i].nom+`</td>
 					<td>`+commande[i].prix+`</td>
+					<td>`+commande[i].quantite+`</td>
 					<td>`+commande[i].promotion+`</td>
 					<td>`+commande[i].codepromo+`</td>
 					<td>`+prixReduit+`</td>
@@ -62,13 +65,16 @@ function datacommande(){
 					<td>`+commande[i].identifiant+`</td>
 					<td>`+commande[i].numero+`</td>
 					<td>`+commande[i].ville_quartier+`</td>
-					<td>`+commande[i].statut+`</td>
-					<td> <button class="btn btn-info validat"
-						 data-idarticle="`+commande[i].idcommande+`">terminer </button></td></tr>
+					<td>`+commande[i].statutCommande+`</td>
+					<td class="action"> <button class="btn btn-info endcomande"
+						 data-idarticle="`+commande[i].idcommande+`">Terminer </button>
+						 <button class="btn btn-danger AnnuleComande"
+						 data-idarticle="`+commande[i].idcommande+`">Annuler </button>
+
+						 </td></tr>
 					
 		  			`;
 		  }
-		  console.log(commande)
 		  $("#tablecommandebody").html(tr)
 		  $('#commandevalidate').DataTable();
 		})
@@ -76,6 +82,51 @@ function datacommande(){
 }
 
 
+function datacommandeof(status){
+	var URLUSER=$('#URLUSER').val();
+	$.get( URLUSER, { action:"get_commande" } )
+	.done(function( data ) {
+		 // var response=JSON.parse(data);
+		 var commande=data.response;
+		 var count= commande.length;
+		 var tr="";
+		  for (var i = 0 ; i < count; i++) {
+		  	var images=commande[i].picture.split(";");
+		  	var prixReduit= parseInt(commande[i].quantite) * (parseInt(commande[i].prix) -(parseInt(commande[i].prix)* commande[i].reduction/100));
+
+		  	if (commande[i].statutCommande==status){
+			tr = tr +`<tr><td> <img class="img-responsive"
+	                                             src="https://api.kitsmass.com/oraimo/img_article/`+images[0]+`"
+	                                             alt="`+commande[i].nom+`" width="100" height="78"></td>
+	                    <td>`+commande[i].numerocommande+`</td>
+	                    <td>`+commande[i].nom+`</td>
+						<td>`+commande[i].prix+`</td>
+						<td>`+commande[i].quantite+`</td>
+						<td>`+commande[i].promotion+`</td>
+						<td>`+commande[i].codepromo+`</td>
+						<td>`+prixReduit+`</td>
+						<td>`+commande[i].description+`</td>
+						<td>`+commande[i].date+`</td>
+						<td>`+commande[i].reference+`</td>
+						<td>`+commande[i].nom_prenom+`</td>
+						<td>`+commande[i].identifiant+`</td>
+						<td>`+commande[i].numero+`</td>
+						<td>`+commande[i].ville_quartier+`</td>
+						<td>`+commande[i].statutCommande+`</td>
+						<td class="action"> <button class="btn btn-info endcomande"
+							 data-idarticle="`+commande[i].idcommande+`">Terminer </button>
+							 <button class="btn btn-danger AnnuleComande"
+							 data-idarticle="`+commande[i].idcommande+`">Annuler </button>
+
+							 </td></tr>
+						
+			  			`;
+		  	}
+		  }
+		  $("#tablecommandebody").html(tr)
+		  $('#commande').DataTable();
+		})
+}
 function datapromotion(){
 	var URLUSER=$('#URLUSER').val();
 	$.get( URLUSER, { action:"get_promotions" } )
@@ -93,7 +144,7 @@ function datapromotion(){
 					<td>`+promotion[i].date_fin+`</td>
 					<td>`+promotion[i].code+`</td>
 
-					<td> <button class="btn btn-info terminatePromotion"
+					<td > <button class="btn btn-info terminatePromotion"
 						 data-idpromotion="`+promotion[i].idtype_promo+`">terminer </button></td></tr>
 					
 		  			`;

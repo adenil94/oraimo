@@ -102,7 +102,7 @@
 
         <div class="header-mobile-mid p-3">
             <div class="header-logo">
-                <a href="index-2.html">
+                <a href="">
                 <img alt="oraimolg"src="/App/Frontend/Web/images/logo.png"class="logo"></a>
             </div>
         </div>
@@ -135,6 +135,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </header>

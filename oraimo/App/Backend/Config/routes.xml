@@ -7,6 +7,9 @@
 	<route url="/crm-admin-oraimo/promotion" module="Crm" action="Promotion" />
 	<route url="/crm-admin-oraimo/Liste-promotion" module="Crm" action="PromotionTable" />
 	<route url="/crm-admin-oraimo/commande" module="Crm" action="Commande" />
+	<route url="/crm-admin-oraimo/commande_Annuler" module="Crm" action="CommandeAnnuler" />
+	<route url="/crm-admin-oraimo/commande_Encours" module="Crm" action="CommandeEncours" />
+	<route url="/crm-admin-oraimo/commande_Terminer" module="Crm" action="CommandeTerminer" />
 
 	<route url="/" module="GestionMaison" action="Connexion" />
 

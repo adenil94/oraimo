@@ -129,13 +129,13 @@
 										<a href="/crm-admin-oraimo/commande">Toute les commandes</a>
 									</li>
 									<li>
-										<a href="">Commandes en cours</a>
+										<a href="/crm-admin-oraimo/commande_Encours">Commandes en cours</a>
 									</li>
 									<li>
-										<a href="">Commande éffectué</a>
+										<a href="/crm-admin-oraimo/commande_Terminer">Commande éffectué</a>
 									</li>
 									<li>
-										<a href="">Créer une commande</a>
+										<a href="/crm-admin-oraimo/commande_Annuler">Commande Annulé</a>
 									</li>
 									
 								</ul>

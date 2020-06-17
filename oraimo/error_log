@@ -1,0 +1,63 @@
+[27-May-2020 22:28:05 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[27-May-2020 22:28:05 Europe/Paris] PHP Fatal error:  Uncaught RuntimeException: La vue spécifiée n'existe pas in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Page.php:40
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/HTTPResponse.php(38): Page->getGeneratedPage()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/App/Frontend/FrontendApplication.php(18): HTTPResponse->send()
+#2 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): FrontendApplication->run()
+#3 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Page.php on line 40
+[27-May-2020 22:41:41 Europe/Paris] PHP Fatal error:  Uncaught RuntimeException: La vue spécifiée n'existe pas in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Page.php:40
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/HTTPResponse.php(38): Page->getGeneratedPage()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/App/Frontend/FrontendApplication.php(18): HTTPResponse->send()
+#2 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): FrontendApplication->run()
+#3 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Page.php on line 40
+[27-May-2020 22:42:36 Europe/Paris] PHP Fatal error:  Uncaught Error: Class 'CrmController' not found in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Application.php:84
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/App/Backend/BackendApplication.php(13): Application->getController()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): BackendApplication->run()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Application.php on line 84
+[27-May-2020 22:42:50 Europe/Paris] PHP Fatal error:  Uncaught RuntimeException: La vue spécifiée n'existe pas in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Page.php:40
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/HTTPResponse.php(38): Page->getGeneratedPage()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/App/Frontend/FrontendApplication.php(18): HTTPResponse->send()
+#2 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): FrontendApplication->run()
+#3 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Page.php on line 40
+[27-May-2020 22:47:44 Europe/Paris] PHP Fatal error:  Uncaught Error: Class 'CrmController' not found in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Application.php:84
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/App/Backend/BackendApplication.php(13): Application->getController()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): BackendApplication->run()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Application.php on line 84
+[07-Jun-2020 08:45:33 Europe/Paris] PHP Fatal error:  Uncaught Error: Class 'UserApplication' not found in /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php on line 15
+[07-Jun-2020 08:47:22 Europe/Paris] PHP Fatal error:  Uncaught Error: Class 'UserController' not found in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Application.php:84
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/App/User/UserApplication.php(13): Application->getController()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): UserApplication->run()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Application.php on line 84
+[08-Jun-2020 14:19:08 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[08-Jun-2020 14:20:08 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[08-Jun-2020 14:22:02 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[08-Jun-2020 14:22:19 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[08-Jun-2020 15:33:43 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[08-Jun-2020 22:43:26 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 20
+[13-Jun-2020 23:39:42 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/Database.php on line 23
+[16-Jun-2020 20:53:17 Europe/Paris] PHP Fatal error:  Uncaught RuntimeException: L'action "CommandeEncours" n'est pas définie sur ce module in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/BackController.php:33
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/App/Backend/BackendApplication.php(14): BackController->execute()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): BackendApplication->run()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/BackController.php on line 33
+[16-Jun-2020 20:53:32 Europe/Paris] PHP Fatal error:  Uncaught RuntimeException: L'action "CommandeTerminer" n'est pas définie sur ce module in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/BackController.php:33
+Stack trace:
+#0 /home/cp1260526p04/public_html/autresite/oraimo/App/Backend/BackendApplication.php(14): BackController->execute()
+#1 /home/cp1260526p04/public_html/autresite/oraimo/bootstrap.php(18): BackendApplication->run()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/autresite/oraimo/Library/oraimo/BackController.php on line 33

@@ -12,7 +12,7 @@
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Commande</h4>
+						<h4 class="page-title">Commande terminer</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
 								<a href="#">
@@ -29,7 +29,7 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="#">Tous les Commandes</a>
+								<a href="#">Les Commandes terminer</a>
 							</li>
 						</ul>
 					</div>
@@ -38,14 +38,14 @@
 							<div class="page-navs bg-white" style="overflow-y: auto;">
 								<div class="nav-scroller">
 									<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
-										<a class="nav-link active show" data-toggle="tab" href="#tab1">Lites des Commandes
+										<a class="nav-link active show" data-toggle="tab" href="#tab1">Lites des Commandes terminer
 											<span class="count ml-1"></span>
 										</a>
 									</div>
 								</div>
 	
 
-									<table id="commandevalidate" class="display table table-striped table-hover" >
+									<table id="commande" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
 													<th>image</th>
@@ -64,8 +64,7 @@
 													<th>numero</th>
 													<th>ville</th>
 													<th>statut</th>
-													<th class="action">action</th>
-													
+													<th class="action">action</th>													
 												</tr>
 											</thead>
 											
@@ -80,6 +79,8 @@
 			</div>
 		</div> 
 
+
+
 <script type="text/javascript">
-	datacommande();
+	datacommandeof("terminer");
 </script>

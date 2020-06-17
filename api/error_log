@@ -1,0 +1,160 @@
+[27-May-2020 23:01:26 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[27-May-2020 23:01:26 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:55
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 55
+[01-Jun-2020 18:43:00 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[01-Jun-2020 17:43:00 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:154
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 154
+[01-Jun-2020 18:43:00 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[01-Jun-2020 18:43:00 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:56
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 56
+[07-Jun-2020 07:43:07 Africa/Porto-Novo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cp.code' in 'where clause' in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:240
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php(240): PDO->query('SELECT * \n     ...')
+#1 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('')
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 240
+[07-Jun-2020 12:24:41 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 12:34:47 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:18:09 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:19:35 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:20:00 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:21:35 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:22:30 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:24:10 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:26:35 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:29:35 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:33:09 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:36:52 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[07-Jun-2020 15:37:24 Europe/Paris] PHP Notice:  Undefined index: code in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 71
+[08-Jun-2020 12:16:05 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 12:16:05 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 12:16:05 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 12:16:05 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:05 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORA')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 11:16:05 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('O')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 11:16:05 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('OR')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 11:16:05 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAI')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 12:16:06 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:06 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAIM')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 12:16:06 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:06 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAIMO')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 12:16:07 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:07 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAIMOP')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 12:16:07 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:07 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAIMOPL')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 12:16:08 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:08 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAIMOPL1')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 12:16:08 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 11:16:08 Africa/Porto-Novo] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:286
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(72): users->promot_code_check('ORAIMOPL15')
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 286
+[08-Jun-2020 14:19:11 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 14:19:11 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:56
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 56
+[08-Jun-2020 14:22:05 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 14:22:05 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:56
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 56
+[08-Jun-2020 14:22:20 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 14:22:20 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:56
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 56
+[08-Jun-2020 15:33:48 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 15:33:48 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:56
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 56
+[08-Jun-2020 22:43:48 Europe/Paris] PHP Notice:  Undefined variable: bdd in /home/cp1260526p04/public_html/Allapi/oraimo/lib/oraimo/Database.php on line 20
+[08-Jun-2020 22:43:48 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php:56
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/article.php(40): article->get_all_article()
+#1 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/article.php on line 56
+[14-Jun-2020 16:05:08 Europe/Paris] PHP Notice:  Undefined index: idarticle in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 83
+[14-Jun-2020 16:05:28 Europe/Paris] PHP Notice:  Undefined index: idarticle in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 83
+[14-Jun-2020 16:06:17 Europe/Paris] PHP Notice:  Undefined index: idarticle in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 83
+[14-Jun-2020 16:06:29 Europe/Paris] PHP Notice:  Undefined index: idarticle in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 83
+[16-Jun-2020 13:45:12 Africa/Porto-Novo] PHP Notice:  Undefined index: Nom_save_article in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 257
+[16-Jun-2020 19:31:28 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'statut' in where clause is ambiguous in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:376
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php(376): PDO->query('SELECT *,A.nom ...')
+#1 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(90): users->getAll_commande()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 376
+[16-Jun-2020 19:31:44 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'statut' in where clause is ambiguous in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:376
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php(376): PDO->query('SELECT *,A.nom ...')
+#1 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(90): users->getAll_commande()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 376
+[16-Jun-2020 19:32:25 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'statut' in where clause is ambiguous in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:376
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php(376): PDO->query('SELECT *,A.nom ...')
+#1 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(90): users->getAll_commande()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 376
+[16-Jun-2020 19:32:52 Europe/Paris] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'statut' in where clause is ambiguous in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php:376
+Stack trace:
+#0 /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php(376): PDO->query('SELECT *,A.nom ...')
+#1 /home/cp1260526p04/public_html/Allapi/oraimo/users.php(90): users->getAll_commande()
+#2 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/entite/users.php on line 376
+[16-Jun-2020 20:59:42 Europe/Paris] PHP Fatal error:  Uncaught Error: Class 'users' not found in /home/cp1260526p04/public_html/Allapi/oraimo/users.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/cp1260526p04/public_html/Allapi/oraimo/users.php on line 46

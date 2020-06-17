@@ -2,17 +2,14 @@
 <style type="text/css">
 	.main-panel {
      max-width: inherit!important; 
+}
 
-}
-.action{
-	display: none;
-}
 </style>
 		<div class="main-panel">
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Commande</h4>
+						<h4 class="page-title">Commande en cours</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
 								<a href="#">
@@ -29,7 +26,7 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="#">Tous les Commandes</a>
+								<a href="#">Tous les Commandes en cours</a>
 							</li>
 						</ul>
 					</div>
@@ -38,14 +35,14 @@
 							<div class="page-navs bg-white" style="overflow-y: auto;">
 								<div class="nav-scroller">
 									<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
-										<a class="nav-link active show" data-toggle="tab" href="#tab1">Lites des Commandes
+										<a class="nav-link active show" data-toggle="tab" href="#tab1">Lites des Commandes en cours
 											<span class="count ml-1"></span>
 										</a>
 									</div>
 								</div>
 	
 
-									<table id="commandevalidate" class="display table table-striped table-hover" >
+									<table id="commande" class="display table table-striped table-hover" >
 											<thead>
 												<tr>
 													<th>image</th>
@@ -81,5 +78,5 @@
 		</div> 
 
 <script type="text/javascript">
-	datacommande();
+	datacommandeof("achat");
 </script>

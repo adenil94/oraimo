@@ -72,8 +72,8 @@
 	<script src="/App/Backend/Web/js/millenium2.min.js"></script>
 
 	<!-- Millenium DEMO methods, don't include it in your project! -->
-	<script src="/App/Backend/Web/js/oraimo.js"></script>
-	<script src="/App/Backend/Web/js/datatableloader.js"></script>
+	<script src="/App/Backend/Web/js/oraimo1.js?v1"></script>
+	<script src="/App/Backend/Web/js/datatableloader1.js?v2"></script>
 	<script type="text/javascript">
 	var URLARTICLE=$("#URLARTICLE").val();
 </script>

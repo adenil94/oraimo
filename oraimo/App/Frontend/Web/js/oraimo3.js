@@ -298,6 +298,8 @@ $(document).on("click",'.acherter',function(){
     var name_price=" Article: <small style='color:#8ec31f'>"+$(this).attr("data-nom")+" <span class='prixProduit'> "+$(this).attr("data-prix")+"</span> </span> FCFA</small> ";
     $(".article_acheter").val($(this).attr("data-id"))
     $(".produit_paiment").html(name_price);
+    var Nom_save_article=$(this).attr("data-nom")+'/'+$(this).attr("data-prix");
+    $(".Nom_save_article").val(Nom_save_article);
     $("#achertermodal").modal();
 })
 

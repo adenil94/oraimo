@@ -71,4 +71,36 @@ class CrmController extends BackController
     
   }
 
+   /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Commande_Annuler
+ * @Copyright (c) Oraimo, 2020
+ */
+  public function executeCommandeAnnuler(HTTPRequest $request)
+  {
+    
+  }   /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Commande_Encours
+ * @Copyright (c) Oraimo, 2020
+ */
+  public function executeCommandeEncours(HTTPRequest $request)
+  {
+    
+  }   /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Commande_Terminer
+ * @Copyright (c) Oraimo, 2020
+ */
+  public function executeCommandeTerminer(HTTPRequest $request)
+  {
+    
+  }
+
+
+
+
  } 
