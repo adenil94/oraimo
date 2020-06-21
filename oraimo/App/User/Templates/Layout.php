@@ -7,7 +7,7 @@
 
 <?php include 'Header.php';?>
  <?php include 'Foot.php';?>
-   <body >
+   <body class="login">
  <?php include 'loaderInPage.php';?>
 
      <div class="wrapper horizontal-layout-2">

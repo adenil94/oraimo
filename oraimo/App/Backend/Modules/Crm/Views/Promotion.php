@@ -53,6 +53,11 @@
 													<label for="inputFloatingLabel" class="placeholder">réduction</label>
 												</div>
 												<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
+													<input  type="text" name="userpercente" class="form-control input-border-bottom" required>
+													<label for="userpercenteFloatingLabel" class="placeholder">% vendeur</label>
+												</div>
+													
+												<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
 													<input  type="text" name="detail" class="form-control input-border-bottom" required>
 													<label for="inputFloatingLabel" class="placeholder">detail</label>
 												</div>

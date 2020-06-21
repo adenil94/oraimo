@@ -2,6 +2,7 @@
 
 <routes> 
 	<route url="/" module="oraimo" action="Index" />
+	<route url="/code=(.*)" module="oraimo" action="Index" />
 	<route url="/(.*)=(.*)" module="oraimo" action="Index" />
 	<route url="/a/(.*)-([0-9]+)" module="oraimo" action="simple" vars="lien,id" ></route>
 	<route url="/a/(.*)-([0-9]+)/(.*)" module="oraimo" action="simple" vars="lien,id" ></route>

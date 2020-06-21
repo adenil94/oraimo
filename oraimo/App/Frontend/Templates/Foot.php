@@ -28,4 +28,18 @@
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 
 <script src="/App/Frontend/Web/js/functions.js"></script>
-<script src="/App/Frontend/Web/js/oraimo3.js?v79"></script>
+<script src="/App/Frontend/Web/js/oraimo5.js?v79"></script>
+
+<script type="text/javascript">
+	var urlparsingFrame=window.location.search;
+	var codePromotion=urlparsingFrame.split("=");
+	var n = codePromotion[0].includes("code");
+	if (n) {
+		$("#code_promot").val(codePromotion[1]);
+		checkcodePromotion(codePromotion[1]);
+	}else{
+		
+	}
+	
+
+</script>

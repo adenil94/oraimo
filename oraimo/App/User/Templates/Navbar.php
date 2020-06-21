@@ -6,29 +6,16 @@
 					</button>
 					<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
 					<!-- Logo Header -->
-					<a href="/crm-admin-oraimo" class="logo d-flex align-items-center">
-						<span alt="navbar brand" class="navbar-brand text-white text-bold">
-							ORAIMO
-						</span>
-					</a>
+					
+						<div class="header-logo">
+                        <a href="/" class="logo d-flex align-items-center"><img alt="Oraimo" width="150" src="/App/Frontend/Web/images/logo.png" class="logo"></a></div>
 					<!-- End Logo Header -->
 
 					<!-- Navbar Header -->
 					<nav class="navbar navbar-header navbar-expand-lg">
 
 						<div class="container-fluid">
-							<div class="collapse" id="search-nav">
-								<form class="navbar-left navbar-form nav-search mr-md-3">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="submit" class="btn btn-search pr-1">
-												<i class="fa fa-search search-icon"></i>
-											</button>
-										</div>
-										<input type="text" placeholder="Recherche ..." class="form-control">
-									</div>
-								</form>
-							</div>
+							
 							<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 								<li class="nav-item toggle-nav-search hidden-caret">
 									<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">

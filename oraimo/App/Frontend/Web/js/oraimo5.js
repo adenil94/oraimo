@@ -300,6 +300,8 @@ $(document).on("click",'.acherter',function(){
     $(".produit_paiment").html(name_price);
     var Nom_save_article=$(this).attr("data-nom")+'/'+$(this).attr("data-prix");
     $(".Nom_save_article").val(Nom_save_article);
+    var code_promo=$("#code_promot").val();
+    checkcodePromotion(code_promo);
     $("#achertermodal").modal();
 })
 

@@ -9,7 +9,7 @@ right: 0;
 bottom: 0;
 display: block;
 /*background: #cbd8d77d;*/
-background: #808cc0f5;
+background: #446303de;
 
 z-index: 99999999999;
 }
@@ -49,7 +49,7 @@ display: block;
     position: absolute;
     width: 16px;
     height: 144px;
-    background: #072955;
+    background: #8ec31ffc;
     left: 100px;
     top: 100px;
     transform: translate(-50%,-50%);
@@ -62,7 +62,7 @@ display: block;
 .ldio-8rltnd7anu2 > div div:nth-child(6) {
     width: 80px;
     height: 80px;
-    background: #f1f2f3;
+    background: #446303de;
     border-radius: 50%;
 }.ldio-8rltnd7anu2 > div div:nth-child(3) {
   transform: translate(-50%,-50%) rotate(45deg)

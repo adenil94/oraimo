@@ -18,7 +18,7 @@
 
         </div>
         <div class="footer-device-mobile-item device-home device-wishlist">
-            <a href="index-2.html">
+            <a href="/">
                     <span class="icon">
                         <i class="fa fa-home" aria-hidden="true"></i>
                     </span>
@@ -26,9 +26,9 @@
             </a>
         </div>
         <div class="footer-device-mobile-item device-home device-cart">
-            <a href="" class="connectuser">
-                    <span class="icon connectuser">
-                        <i class="fa fa-user connectuser" aria-hidden="true"></i>
+            <a href="https://business.oraimo-bj.com/" class="">
+                    <span class="icon">
+                        <i class="fa fa-user " aria-hidden="true"></i>
                     </span>
                 Compte
             </a>
@@ -78,7 +78,7 @@
                                                 </div>
                                                 <div class="row mb-2">
                                                     <div class="col-md-12">
-                                                      <input type="text" class="form-control" name="ville_quartier" id="ville_quartier" placeholder="Ville et lieux de livraison " value="" required>
+                                                      <input type="text" class="form-control" name="ville_quartier" id="ville_quartier" placeholder="Ville et lieu de livraison " value="" required>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2">
@@ -281,7 +281,7 @@ Le(s) article(s) retourné(s) doivent être neufs, non utilisés et dans leur bo
 Tout échange ou retour doit faire l’objet d’une demande d'échange auprès de KITS.<br>
 Etat des articles<br>
 Tous les articles retournés devront être renvoyés parfaitement intacts.<br>
-A réception du colis, KITS jugera du parfait état de la marchandise retournée. Aucun retour ne sera accepté si les articles retournés ont été visiblement utilisés ou endommagés du fait du client et que cette utilisation ou ces dommages rendent les articles impropres à la vente. Si le retour est refusé par NOVA, les articles seront alors retournés au client.<br>
+A réception du colis, KITS jugera du parfait état de la marchandise retournée. Aucun retour ne sera accepté si les articles retournés ont été visiblement utilisés ou endommagés du fait du client et que cette utilisation ou ces dommages rendent les articles impropres à la vente. Si le retour est refusé par KITS , les articles seront alors retournés au client.<br>
 Propriété intellectuelle<br>
 Tous les textes, commentaires, ouvrages, illustrations et images reproduits sur KITS sont réservés au titre du droit d'auteur.<br>
 Toute reproduction totale ou partielle du site de <a href="https://www.oraimo-bj.com/" >www.oraimo-bj.com</a> est strictement interdite sauf accord préalable.</p>
@@ -354,6 +354,8 @@ if (nom_prenom==""|| numero==""|| ville_quartier=="" || quantite==""){
 swal("Oups!", "la quantité, le Nom, Numéro et adresse doivent être remplie  ", "error")
 }else if(code_promot==""){
 swal("Oups!", "Appliquer le code promo ci-dessus  ", "error");
+}else if(numero.length<8){
+swal("Oups!", "Vérifier le numéro de téléphone SVP ", "error");
 } 
 else{
      var myForm = document.querySelector('#valide_achat_form');
@@ -367,27 +369,6 @@ else{
 }
 
 })
-$(document).on("click",'#connexionValide',function(){
-var URLUSER=$('#URLUSER').val();
-var numero=$("#numeroconnexion").val();
-var passe=$("#mot_de_pase").val();
-var confirm_mot_de_passe=$("#confirm_mot_de_passe").val();
 
-if (passe==""|| numero==""){
-swal("Oups!", "informations inccorecte  ", "error")
-}else if (confirm_mot_de_passe!=passe && confirm_mot_de_passe!=""){
-  swal("Oups!", "Les mots de passe ne correspondent pas  ", "error")
-}else{
-   var myForm = document.querySelector('#connexion_form');
-   var formData= new FormData(myForm); 
-    $('.overflow').show(); 
-    var messagesucess="Votre achat à été enregistrer,  patientez quelque minute pour la validation par sms ou whatsapp!";
-    var rederecto='/user/'+numero;
-    var idprogress='#progresse';
-    var url=URLUSER;
-     connexion(formData,messagesucess,rederecto,idprogress,url);  
-}
-
-})
 
 </script>

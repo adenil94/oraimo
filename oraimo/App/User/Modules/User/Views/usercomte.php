@@ -5,7 +5,12 @@
 				<span id="iduser" style="display: none;" ></span>
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Compte utilisateur : <span id="username" ></span></h4>
+						<h4 class="page-title">Compte utilisateur : <span id="username" ></span>
+							<span id="statut">
+								
+							</span>
+
+						</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
 								<a href="#">
@@ -27,126 +32,50 @@
 						</ul>
 					</div>
 					<div class="page-category">
-						<div class="row row-card-no-pd mt-2" style="display: none;">
-							<div class="col-sm-6 col-md-3">
-								<div class="card card-stats card-round">
-									<div class="card-body ">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="flaticon-chart-pie text-warning"></i>
-												</div>
-											</div>
-											<div class="col-7 col-stats">
-												<div class="numbers">
-													<p class="card-category">Nombre de visite totale</p>
-													<h4 class="card-title">0</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="card card-stats card-round">
-									<div class="card-body ">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="flaticon-coins text-success"></i>
-												</div>
-											</div>
-											<div class="col-7 col-stats">
-												<div class="numbers">
-													<p class="card-category">Nombre de vente effectué</p>
-													<h4 class="card-title">0</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="card card-stats card-round">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="flaticon-error text-danger"></i>
-												</div>
-											</div>
-											<div class="col-7 col-stats">
-												<div class="numbers">
-													<p class="card-category">Totale de prix généré</p>
-													<h4 class="card-title">0</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="card card-stats card-round">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="flaticon-twitter text-primary"></i>
-												</div>
-											</div>
-											<div class="col-7 col-stats">
-												<div class="numbers">
-													<p class="card-category">Nmbre de vente du mois</p>
-													<h4 class="card-title">0</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-					    </div>
+						
 						<div class="content content-full">
-							<div class="page-navs bg-white">
-								<div class="nav-scroller">
-									<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
-										<a class="nav-link active show" data-toggle="tab" href="#tab1">Listes de vos liens
-											<span class="count ml-1"></span>
-										</a>
-										
-										<div class="ml-auto">
-											<a href="#" data-toggle="modal" data-target="#codeModale" class="btn btn-success">Ajouter un code</a>
+							<div class="">
+							<div class="card">
+								
+								<div class="card-body">
+									<ul class="nav nav-pills nav-secondary  nav-pills-no-bd nav-pills-icons justify-content-center" id="pills-tab-with-icon" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active" id="pills-home-tab-icon" data-toggle="pill" href="#pills-home-icon" role="tab" aria-controls="pills-home-icon" aria-selected="true">
+												
+												<i class="fa fa-home" aria-hidden="true"></i>
+
+												Acceuil
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-profile-tab-icon" data-toggle="pill" href="#pills-profile-icon" role="tab" aria-controls="pills-profile-icon" aria-selected="false">
+												<i class="fa fa-user-o" aria-hidden="true"></i>
+												Compte
+											</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-contact-tab-icon" data-toggle="pill" href="#pills-contact-icon" role="tab" aria-controls="pills-contact-icon" aria-selected="false">
+												<i class="fa fa-line-chart" aria-hidden="true"></i>
+												statistique
+											</a>
+										</li>
+									</ul>
+									<div class="tab-content mt-2 mb-3" id="pills-with-icon-tabContent">
+										<div class="tab-pane fade show active" id="pills-home-icon" role="tabpanel" aria-labelledby="pills-home-tab-icon">
+											<?php include 'tableauAcceuil.php';?>
+										</div>
+										<div class="tab-pane fade" id="pills-profile-icon" role="tabpanel" aria-labelledby="pills-profile-tab-icon">
+											<?php include 'CompteUser.php';?>
+										</div>
+										<div class="tab-pane fade" id="pills-contact-icon" role="tabpanel" aria-labelledby="pills-contact-tab-icon">
+											<?php include 'StatistiqueUser.php';?>
+											
 										</div>
 									</div>
 								</div>
-
-									<table id="code_promotion" class="display table table-striped table-hover" >
-											<thead>
-												<tr>
-													<th>#</th>
-													<th>lien</th>
-													<th>Date de debut</th>
-													<th>Date de fin </th>
-													<th>code</th>
-													<th>action</th>
-
-												
-												</tr>
-											</thead>
-											<tfoot>
-												<tr>
-													<th>#</th>
-													<th>lien</th>
-													<th>Date de debut</th>
-													<th>Date de fin </th>
-													<th>code</th>
-													<th>action</th>
-												</tr>
-											</tfoot>
-											<tbody id="tablecodepromo">
-												
-											</tbody>
-									</table>
 							</div>
+						</div>
+							
 						</div>
 					</div>
 				</div>
@@ -172,10 +101,6 @@
 										<select class="form-control input-border-bottom" id="selectFloatingLabel" required>
 											<option value="">&nbsp;</option>
 											<option value=""  data-code="">1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
 										</select>
 										<label for="selectFloatingLabel" class="placeholder">Choisir une promotion</label>
 									</div>
@@ -196,3 +121,8 @@
     </div>
   </div>
 </div>
+
+
+<script type="text/javascript">
+	
+</script>

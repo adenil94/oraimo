@@ -48,10 +48,10 @@
                  <div class="header-control">
                     <div class="header-control-inner">
                         <div class="meta-dreaming">
-                             <div class="menu-item block-user block-dreaming connectuser">
-                                <i class="block-link connectuser" href="">
-                                    <span class="flaticon-profile connectuser"></span>
-                                </i>
+                             <div class="menu-item block-user block-dreaming ">
+                                <a class="block-link " href="https://business.oraimo-bj.com" target="_blank">
+                                    <span class="flaticon-profile "></span>
+                                </a>
                             </div>
                             <div class="block-minicart block-dreaming oraimolg-mini-cart oraimolg-dropdown">
 

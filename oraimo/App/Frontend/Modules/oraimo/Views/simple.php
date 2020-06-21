@@ -1,6 +1,6 @@
 <div class="banner-wrapper no_background">
     <div class="banner-wrapper-inner">
-        <nav class="oraimolg-breadcrumb container"><a href="index-2.html">Article</a><i class="fa fa-angle-right"></i><a href="#"><?=$name?></a>
+        <nav class="oraimolg-breadcrumb container"><a href="/">Article</a><i class="fa fa-angle-right"></i><a href="#"><?=$name?></a>
             <i class="fa fa-angle-right"></i><?=$name?>
         </nav>
     </div>

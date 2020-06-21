@@ -2,6 +2,7 @@
 
 <routes> 
 
+	<route url="/user" module="User" action="connexion" />
 	<route url="/user/(.*)" module="User" action="usercomte" />
 
 </routes>

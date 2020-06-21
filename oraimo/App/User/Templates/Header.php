@@ -1,6 +1,6 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Oraimo crm</title>
+	<title>Oraimo User</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="" type="image/x-icon"/>
 
@@ -15,13 +15,10 @@
 			}
 		});
 	</script>
-
 	<!-- CSS Files -->
   <link rel="stylesheet" href="/Web/css/font-awesome-4.7.0/css/font-awesome.css">
 
-	<link rel="stylesheet" href="/App/Backend/Web/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/App/Backend/Web/css/Oraimo.min.css?1">
 
-	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="/App/Backend/Web/css/style.css">
+	<link rel="stylesheet" href="/App/User/Web/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/App/User/Web/css/Oraimo.min.css?1">
 </head>
