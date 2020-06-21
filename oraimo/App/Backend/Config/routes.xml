@@ -5,6 +5,8 @@
 	<route url="/crm-admin-oraimo" module="Crm" action="PageDacceuilArticleTable" />
 	<route url="/crm-admin-oraimo/Ajoute-article" module="Crm" action="PageAjoutArticle" />
 	<route url="/crm-admin-oraimo/promotion" module="Crm" action="Promotion" />
+	<route url="/crm-admin-oraimo/Vendeur" module="Crm" action="Vendeur" />
+	<route url="/crm-admin-oraimo/Demanpaiement" module="Crm" action="Demanpaiement" />
 	<route url="/crm-admin-oraimo/Liste-promotion" module="Crm" action="PromotionTable" />
 	<route url="/crm-admin-oraimo/commande" module="Crm" action="Commande" />
 	<route url="/crm-admin-oraimo/commande_Annuler" module="Crm" action="CommandeAnnuler" />

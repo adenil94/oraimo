@@ -103,10 +103,10 @@
 							<div class="navbar-dropdown animated fadeIn">
 								<ul>
 									<li>
-										<a href="">Ajout d'utilisateur</a>
+										<a href="/crm-admin-oraimo/Demanpaiement">Paiement Attente</a>
 									</li>
 									<li>
-										<a href="">Liste des vendeurs</a>
+										<a href="/crm-admin-oraimo/Vendeur">Liste des vendeurs</a>
 									</li>
 									<li>
 										<a href="">Liste des livreur</a>
@@ -114,7 +114,7 @@
 									<li>
 										<a href="">Liste des admin</a>
 									</li>
-									
+
 								</ul>
 							</div>
 						</li>

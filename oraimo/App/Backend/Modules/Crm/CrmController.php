@@ -89,7 +89,8 @@ class CrmController extends BackController
   public function executeCommandeEncours(HTTPRequest $request)
   {
     
-  }   /**
+  } 
+    /**
  * @license Oraimo License
  * @author Andil ADEBIYI <andiladebiyi@gmail.com>
  * @route /crm-admin-oraimo/Commande_Terminer
@@ -100,7 +101,25 @@ class CrmController extends BackController
     
   }
 
+    /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Vendeur
+ * @Copyright (c) Oraimo, 2020
+ */
+  public function executeVendeur(HTTPRequest $request)
+  {
+    
+  }
 
-
-
+    /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Demanpaiement
+ * @Copyright (c) Oraimo, 2020
+ */
+  public function executeDemanpaiement(HTTPRequest $request)
+  {
+    
+  }
  } 

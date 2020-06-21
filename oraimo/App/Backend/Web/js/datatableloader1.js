@@ -154,3 +154,59 @@ function datapromotion(){
 		})
 
 }
+
+function dataVendeur(){
+		var URLUSER=$('#URLUSER').val();
+	$.get( URLUSER, { action:"get_all_users" } )
+	.done(function( data ) {
+		 // var response=JSON.parse(data);
+		 var users=data.response.users;
+		 var count= users.length;
+		 var tr="";
+		  for (var i = 0 ; i < count; i++) {
+		  	tr = tr +`<tr>
+                    <td>`+users[i].identifiant+`</td>
+					<td>`+users[i].email_numero+`</td>
+					<td>`+users[i].adresse+`</td>
+					<td>`+users[i].statut+`</td>
+					<td > <button class="btn btn-info userAction" data-action="actif"
+						 data-iduser="`+users[i].idusers+`">valider </button>
+						 <button class="btn btn-warning userAction" data-action="attente"
+						 data-iduser="`+users[i].idusers+`">Suspendre </button>
+						 </td></tr>
+					
+		  			`;
+		  }
+		  $("#tablevendeurbody").html(tr);
+		  $('#vendeurvalidate').DataTable();
+		})
+}
+function dataDemandpaiement(){
+		var URLUSER=$('#URLUSER').val();
+	$.get( URLUSER, { action:"get_allpaieent" } )
+	.done(function( data ) {
+		 // var response=JSON.parse(data);
+		 var paiement=data.response.paiement;
+		 var count= paiement.length;
+		 var tr="";
+		  for (var i = 0 ; i < count; i++) {
+		  	tr = tr +`<tr>
+                    <td>`+paiement[i].identifiant+`</td>
+					<td>`+paiement[i].email_numero+`</td>
+					<td>`+paiement[i].adresse+`</td>
+					<td>`+paiement[i].montant+`</td>
+					<td>`+paiement[i].date+`</td>
+					<td > <button class="btn btn-info paiementAction" data-action="valider"
+						 data-iduser="`+paiement[i].iddemand_paiement+`">valider </button>
+						 <button class="btn btn-warning paiementAction" data-action="annuler"
+						 data-iduser="`+paiement[i].iddemand_paiement+`">Annuler </button>
+						 </td></tr>
+					
+		  			`;
+		  }
+		  $("#tableDemandpaiementrbody").html(tr);
+		  $('#Demandpaiementvalidate').DataTable();
+		})
+}
+
+

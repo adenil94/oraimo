@@ -15,7 +15,7 @@ $(document).on("change","#selectFloatingLabel",function(){
 	
 });
 
-
+ 
 $(document).on("click",".creercode",function(){
 
 	var valeur=$('#selectFloatingLabel').val();
@@ -45,12 +45,12 @@ $(document).on("click",".creercode",function(){
 });
 
 
-$( document).on( 'click','.del', function (e)
-    {
+$( document).on( 'click','.del', function (e){
+
 var URLUSER=$('#URLUSER').val();
 
     e.preventDefault();
-	if (confirm("Voulz-vous vraiment supprimer ce code promo  ? ")) {
+	if (confirm("En supprimant ce  code promo, les commissions en attente lié a ce code  seront annulé  ? ")) {
 	var idpromot=$(this).attr("data-idpromot");
 	var picture=$(this).attr("data-img");
         $.get( URLUSER, { action:"del_user_promo_code",idpromot: idpromot } )
@@ -58,10 +58,40 @@ var URLUSER=$('#URLUSER').val();
       	 location.reload(true);
       });
 	}
-    } );
+} );
 
-$( document).on( 'click','.out', function (e)
-    {
- window.location.href="/";
-    } );
+$( document).on( 'click','.out', function (e){
+ 	window.location.href="/";
+} );
+
+
+$( document).on( 'click','#demande_payement', function (e){
+ var montant =parseInt($("#solde").html());
+ var URLUSER=$('#URLUSER').val();
+
+    e.preventDefault();
+    if (montant<1000) {
+    	swal("Oups!", "Demande de paiement d'un montant inferieure a 1000FCFA n'est pas autorisé", "error");
+    }else{
+	if (confirm("Voulez-vous vraiment effectuer une demande de paiement  ? ")) {
+		$(".overflow").show();
+	var id=$(this).attr("data-id");
+        $.get( URLUSER, { action:"ask_paiement",montant: montant;identification:id } )
+      .done(function(data) {
+      	 var reponse =data.response;
+      	 if (response=="true") {
+      	 	$(".overflow").hide();
+      	 	swal( "Demande envoyé!");
+      	 } else if (response=="paiement_exite"){
+      	 	$(".overflow").hide();
+      	 	swal( "Demande existante, patienter le traitement!");
+      	 }else{
+      	 	$(".overflow").hide();
+      	 	swal( "Demande non envoyé!");
+      	 }
+      });
+	}
+
+    }
+} );
 

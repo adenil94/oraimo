@@ -473,3 +473,36 @@ $( document).on( 'click','.endcomande', function (e)
       });
 	}
     } );
+
+
+
+
+$( document).on( 'click','.userAction', function (e)
+    {
+    	var action =$(this).attr("data-action");
+    	var id=$(this).attr("data-iduser");
+    e.preventDefault();
+    var URLUSER=$('#URLUSER').val();
+	var idArticle=$(this).attr("data-idarticle");
+	var picture=$(this).attr("data-img");
+        $.get( URLUSER, { action:"activ_suspend",statut: action,identification:id } )
+      .done(function(data) {
+      	 location.reload(true);
+      });
+
+    } );
+
+$( document).on( 'click','.paiementAction', function (e)
+    {
+    	var action =$(this).attr("data-action");
+    	var id=$(this).attr("data-iduser");
+    e.preventDefault();
+    var URLUSER=$('#URLUSER').val();
+	var idArticle=$(this).attr("data-idarticle");
+	var picture=$(this).attr("data-img");
+        $.get( URLUSER, { action:"action_paiement",statut: action,identification:id } )
+      .done(function(data) {
+      	 location.reload(true);
+      });
+
+    } );

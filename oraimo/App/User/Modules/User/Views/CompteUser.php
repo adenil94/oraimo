@@ -21,7 +21,7 @@
 											
 										</div>
 										<div class="view-profile">
-											<a href="#" class="btn btn-secondary btn-block" id="demande_payement"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Demande de paiement</a>
+											<a href="#" class="btn btn-secondary btn-block" id="demande_payement" data-id=""><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Demande de paiement</a>
 										</div>
 									</div>
 								</div>
