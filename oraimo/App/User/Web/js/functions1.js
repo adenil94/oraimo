@@ -263,7 +263,7 @@ function userActif(response){
      var tr="";
     for (var i = 0 ; i < count; i++) {
         tr = tr +`<tr><td>`+i+`</td>
-                <td> <a class="btn btn-info" href="https://oraimo-bj.com/?`+promotion[i].codepromo+`" >Partager</a>
+                <td> <a class="btn btn-info" href="https://oraimo-bj.com/?code=`+promotion[i].codepromo+`" >Partager</a>
                 </td>
                 <td>`+promotion[i].date_debut+`</td>
                 <td>`+promotion[i].date_fin+` </td>
@@ -299,7 +299,7 @@ function getUserInf(numero){
         var response=data;
          $(".overflow").hide();
             if (response.response.user==false) {
-                 window.location.href="/";
+                 window.location.href="https://business.oraimo-bj.com/";
             }else{
                 if (response.response.user.statut=="actif") {
                     userActif(response);

@@ -53,7 +53,7 @@
 												Compte
 											</a>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item" style="display: none;">
 											<a class="nav-link" id="pills-contact-tab-icon" data-toggle="pill" href="#pills-contact-icon" role="tab" aria-controls="pills-contact-icon" aria-selected="false">
 												<i class="fa fa-line-chart" aria-hidden="true"></i>
 												statistique
@@ -124,5 +124,9 @@
 
 
 <script type="text/javascript">
-	
+var  users = window.location.pathname;
+var userInfo=users.split("/");
+var Numero=userInfo[2];
+getUserInf(Numero);
+allpromotion();
 </script>

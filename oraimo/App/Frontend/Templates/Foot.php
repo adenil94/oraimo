@@ -27,8 +27,8 @@
 
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 
-<script src="/App/Frontend/Web/js/functions.js"></script>
-<script src="/App/Frontend/Web/js/oraimo5.js?v79"></script>
+<script src="/App/Frontend/Web/js/functions1.js"></script>
+<script src="/App/Frontend/Web/js/oraimo6.js?v79"></script>
 
 <script type="text/javascript">
 	var urlparsingFrame=window.location.search;
@@ -37,9 +37,18 @@
 	if (n) {
 		$("#code_promot").val(codePromotion[1]);
 		checkcodePromotion(codePromotion[1]);
+		// vérifier si l'utilisateur a déjà cliker sur le lien une fois dans la journée
+		var cookie = getCookie(codePromotion[1]);
+		if (!cookie) {
+		incremaantclickCode(codePromotion[1]);
+		}
 	}else{
 		
 	}
 	
+
+
+
+
 
 </script>

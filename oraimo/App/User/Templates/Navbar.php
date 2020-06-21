@@ -4,7 +4,7 @@
 					<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 						<i class="fa fa-bars" aria-hidden="true" style="color: white"></i>
 					</button>
-					<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+					<button class="topbar-toggler more"><i class="fa fa-ellipsis-v" aria-hidden="true" style="color: white"></i></button>
 					<!-- Logo Header -->
 					
 						<div class="header-logo">
@@ -17,11 +17,6 @@
 						<div class="container-fluid">
 							
 							<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-								<li class="nav-item toggle-nav-search hidden-caret">
-									<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
-										<i class="fa fa-search"></i>
-									</a>
-								</li>
 								
 								<li class="nav-item dropdown hidden-caret">
 									<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
@@ -43,7 +38,7 @@
 											</li>
 											<li>
 												<a class="dropdown-item" href="#" style="display: none;">Paramètre</a>
-												<div class="dropdown-divider"></div>
+												<div class="dropdown-divider" style="display: none;"></div>
 												<a class="dropdown-item out" href="#">Fermer</a>
 											</li>
 										</div>

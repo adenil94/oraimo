@@ -1,9 +1,3 @@
-var  users = window.location.pathname;
-var userInfo=users.split("/");
-var Numero=userInfo[2];
-getUserInf(Numero);
-allpromotion();
-
 
 
 $(document).on("change","#selectFloatingLabel",function(){
