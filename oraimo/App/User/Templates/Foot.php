@@ -33,6 +33,6 @@
 	<script src="/App/User/Web/js/millenium2.min.js"></script>
 
 	<!-- Millenium DEMO methods, don't include it in your project! -->
-	<script src="/App/User/Web/js/functions1.js"></script>
-	<script src="/App/User/Web/js/oraimo6.js"></script>
+	<script src="/App/User/Web/js/functions2.js"></script>
+	<script src="/App/User/Web/js/oraimo2.js"></script>
 	<script src="/App/User/Web/js/datatableloader.js"></script>
