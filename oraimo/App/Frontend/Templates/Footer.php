@@ -82,7 +82,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2">
-                                                  <small> Code promo à utiliser : ORAIMOPL15</small>
+                                                  <small style="display: none;"> Code promo à utiliser : ORAIMOPL15</small>
                                                     <div class="col-md-12">
                                                       <input type="text" class="form-control"  name="code_promot" id="code_promot" placeholder="Code promo" value="" required >
                                                     </div>
@@ -352,8 +352,6 @@ var code_promot=$("#code_promot").val();
 
 if (nom_prenom==""|| numero==""|| ville_quartier=="" || quantite==""){
 swal("Oups!", "la quantité, le Nom, Numéro et adresse doivent être remplie  ", "error")
-}else if(code_promot==""){
-swal("Oups!", "Appliquer le code promo ci-dessus  ", "error");
 }else if(numero.length<8){
 swal("Oups!", "Vérifier le numéro de téléphone SVP ", "error");
 } 

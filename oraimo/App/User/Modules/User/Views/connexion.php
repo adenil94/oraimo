@@ -18,17 +18,20 @@
 	<div class="wrapper wrapper-login wrapper-login-full p-0">
 		<div class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient" style="background-color: #8ec31f">
 
-			<h2 class="title fw-bold text-white mb-3">Rejoignez la communauté vendeur de Araimo Bénin</h2>
+			<h2 class="title fw-bold text-white mb-3">Rejoignez la communauté vendeur de KITS</h2>
 			<p class="subtitle text-white op-7">
 				<ul style="color: white; text-align: left;" >
-					Vous aurez la possibilité de :
-					<li>Créer vote code promotion</li>
+					En tant que Vendeur, vous générez du trafic et des ventes pour notre site Web et recevez en retour des commissions attrayantes.
+					Vous avez la possibilité de  :
+					<li>Créer votre code de promotion</li>
 					<li>Partager votre lien</li>
-					<li>Recevoir les commisions a chaque vente effectué</li>
-					<li>Suivre les statistques de votre lien</li>
-					<li>faire une demande de paiement à tous moment</li>
-					<li>effectuer un achat avec vos commision générer</li>
+					<li>Recevoir vos commissions à chaque vente effectuée</li>
+					<li>Suivre les statistiques de votre lien</li>
+					<li>Faire une demande de paiement à tout moment</li>
+					<li>Effectuer un achat avec vos commissions générées.</li>
 				</ul>
+
+
 		
 		</p>
 		</div>
@@ -39,7 +42,7 @@
 				<h3 class="text-center">
 					<div class="header-logo">
                         <a href="/"><img alt="Oraimo" width="150" src="/App/Frontend/Web/images/logo.png" class="logo"></a></div>
-				Conectez-vous a votre espace de contrôle
+				Connectez-vous a votre èspace de contrôle
 				</h3>
 				<form id="connexion_form">
 					
@@ -50,7 +53,7 @@
 					</div>
 					<div class="form-group">
 						<label for="password" class="placeholder"><b>Mot de passe</b></label>
-						<a href="#" class="link float-right" id="modifierModpass">Mot de passe oublier ? ?</a>
+						<a href="#" class="link float-right" id="modifierModpass">Mot de passe oublié ? ?</a>
 						<div class="position-relative">
 							<input id="mot_de_pase" name="password" type="password" class="form-control" required autocomplete>
 							<div class="show-password">
@@ -62,11 +65,11 @@
 				</form>
 					<div class="form-group form-action-d-flex mb-3">
 						
-						<a href="#"  id="connexionValide" class="btn btn-secondary col-md-5 float-right mt-3 mt-sm-0 fw-bold">Connecter</a>
+						<a href="#"  id="connexionValide" class="btn btn-secondary col-md-5 float-right mt-3 mt-sm-0 fw-bold">Se connecter</a>
 					</div>
 					<div class="login-account">
-						<span class="msg">Vous n'êtes pas encore vendeur sur oraimo ?</span>
-						<a href="#" id="show-signup" class="link">Faite une demande ici</a>
+						<span class="msg">Vous n'êtes pas encore vendeur KITS ?</span>
+						<a href="#" id="show-signup" class="link">Faites une demande ici</a>
 					</div>
 				</div>
 			</div>
@@ -91,7 +94,7 @@
 					<div class="form-group">
 						<label for="numerodemand" class="placeholder"><b>Numéro</b></label>
 						<input  id="numerodemand" name="numerodemand" type="text" class="form-control" required maxlength="8">
-					<small>Nb: nom,prénom et numéro doivent être conforme a celui sur votre compte mobile money</small>
+					<small>Nb: nom,prénom et numéro doivent être conformes à celui sur votre compte mobile money</small>
 					</div>
 					<div class="form-group">
 						<label for="passwordsignin" class="placeholder"><b>Mot de passe</b></label>
@@ -115,7 +118,7 @@
 					<div class="row form-sub m-0">
 						<div class="custom-control custom-checkbox">
 							<input type="checkbox" class="custom-control-input" name="agree" id="agree">
-							<label class="custom-control-label" for="agree">Condition d'utilisation .</label>
+							<label class="custom-control-label Condition" for="agree" data-toggle="modal" data-target="#vente_apropo">Conditions d'utilisation .</label>
 						</div>
 					</div>
 					 <input type="text" hidden name="action" value="registe_user">
@@ -138,6 +141,47 @@
 	</div>
 
 <div>
+
+<!-- Modal -->
+<div class="modal fade" id="vente_apropo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="vente_apropoTitle">CONDITIONS GÉNÉRALES D'UTILISATION</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+ <p>
+ 	
+Bienvenue sur le site www.oraimo-bj.com , site de vente exclusive des accessoires de la marque ORAIMO au Bénin. Ledit site est géré par l’Etablissement KITS à qui la marque ORAIMO donne mandat limité de gérer pour son compte le site www.oraimo-bj.com .
+ </p>      
+<p>
+L’Etablissement KITS est une entreprise de droit Béninois légalement enregistrée aux coordonnées ci-après:
+</p>
+
+<p>
+	
+N° rccm: RB/COT/20 A 58832 du 04-06-2020
+N° Ifu: 0201910857762
+Adresse : Ilôt 373, Fignon Sike, Cotonou (Bénin)
+Téléphone : +229 91 79 42 50
+</p>
+<p>
+En validant la création de votre compte de Vendeur vous acceptez librement que contracté avec l'Etablissement KITS. <br>
+KITS se réserve le droit de supprimer votre compte sans préavis.
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Accepter</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 	<script type="text/javascript">
 		setTimeout(function(){  $(".overflow").hide(); }, 1000);
@@ -224,7 +268,8 @@ var id =$(this).attr("data-id");
 	$(this).addClass('showpass');
 });
 $(document).on("click","#modifierModpass",function(){
-  window.open("whatsapp://send?text=Bonsoir j'ai oublié mon mot de passe , je suis un vendeur sur oraimo, mon Numéro est :", '_blank');
+
+  window.open("https://wa.me/22991794250?text=Bonsoir j'ai oublié mon mot de passe , je suis un vendeur sur oraimo, mon Numéro est :", '_blank');
 
 });
 

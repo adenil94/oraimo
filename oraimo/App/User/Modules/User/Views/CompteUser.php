@@ -1,7 +1,7 @@
 <div class="page-navs bg-white">
 	<div class="nav-scroller">
 		<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
-			<a class="nav-link active show" data-toggle="tab" href="#tab1"><i class="fa fa-user" aria-hidden="true"></i> Profile Utilisateur
+			<a class="nav-link active show" data-toggle="tab" href="#tab1"><i class="fa fa-user" aria-hidden="true"></i> Profil Vendeur
 				<span class="count ml-1"></span>
 			</a>
 		</div>
@@ -29,15 +29,15 @@
 									<div class="row user-stats text-center">
 										<div class="col">
 											<div class="number"><span id="click">125 </span> </div>
-											<div class="title">Visites</div>
+											<div class="title">Visites <br>via le lien</div>
 										</div>
 										<div class="col">
 											<div class="number"><span id="vente" > 25 </span>  </div>
-											<div class="title">Vendues</div>
+											<div class="title">Vendues <br> réaliser</div>
 										</div>
 										<div class="col">
-											<div class="number"><span id="echoue" > 134</span></div>
-											<div class="title">Echoué</div>
+											<div class="number"><span id="Attente" > 134</span></div>
+											<div class="title">Ventes<br> en Attente</div>
 										</div>
 									</div>
 								</div>
@@ -67,7 +67,7 @@
 									<div class="row mt-3">
 										<div class="col-md-12">
 											<div class="form-group form-group-default">
-												<label>Address</label>
+												<label>Adresse</label>
 												<input type="text" class="form-control" id="adresseuser" value="Cotonou" name="adresse" placeholder="Address">
 											</div>
 										</div>

@@ -1,7 +1,7 @@
 <div class="page-navs bg-white">
 	<div class="nav-scroller">
 		<div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100">
-			<a class="nav-link active show" data-toggle="tab" href="#tab1"><i class="fa fa-bars" aria-hidden="true"></i> Listes de vos liens
+			<a class="nav-link active show" data-toggle="tab" href="#tab1"><i class="fa fa-bars" aria-hidden="true"></i> Liste de vos liens
 				<span class="count ml-1"></span>
 			</a>
 			

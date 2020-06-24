@@ -241,20 +241,19 @@ function userActif(response){
     var nomcodvar=response.response.user.identifiant.replace(" ", "");
     $(".cosdeinoute").val(nomcodvar.toUpperCase());
     $("#iduser").html(response.response.user.idusers);
-    console.log(response.response.statistique);
+    $("#demande_payement").attr("data-id",response.response.user.idusers);
     $("#solde").html(response.response.sumstat.prixTotale);
     $("#numero").html(response.response.user.email_numero);
     $("#adresse").html(response.response.user.adresse);
 
     $("#click").html(response.response.sumstat.click);
     $("#vente").html(response.response.sumstat.Vente_effectue);
-    var restant= parseInt(response.response.sumstat.click)- parseInt(response.response.sumstat.Vente_effectue);
-    $("#echoue").html(restant);
+    $("#Attente").html(response.response.sumstat.Vente_attente);
     $("#nom_prenom").val(response.response.user.identifiant);
     $("#numerouser").val(response.response.user.email_numero);
     $("#adresseuser").val(response.response.user.adresse);
     var statut=`<button class="btn btn-success "><span class="btn-label"><i class="fa fa-check"></i></span>
-                Vendeur validé par ORAIMO BJ
+                Vendeur validé par KITS 
                 </button>`;
     $("#statut").html(statut);
 
@@ -270,8 +269,8 @@ function userActif(response){
                 <td>`+promotion[i].codepromo+`</td>
                 <td>
                     <button
-                    class="btn btn-info edit">Modif</button> <button class="btn btn-danger del"
-                    data-idpromot="`+promotion[i].idcode_promo+`" >del</button></td></tr>
+                    class="btn btn-info edit">Modifier</button> <button class="btn btn-danger del"
+                    data-idpromot="`+promotion[i].idcode_promo+`" >Supprmer</button></td></tr>
                 `;
       }
     $("#tablecodepromo").html(tr)

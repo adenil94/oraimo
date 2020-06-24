@@ -454,7 +454,7 @@ $( document).on( 'click','.AnnuleComande', function (e)
 	var picture=$(this).attr("data-img");
         $.get( URLUSER, { action:"cancel_commande",identification: idArticle } )
       .done(function(data) {
-      	// location.reload(true);
+      	 location.reload(true);
       });
 	}
     } );

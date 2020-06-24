@@ -5,7 +5,7 @@
 				<span id="iduser" style="display: none;" ></span>
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Compte utilisateur : <span id="username" ></span>
+						<h4 class="page-title">Compte Vendeur : <span id="username" ></span>
 							<span id="statut">
 								
 							</span>
@@ -44,7 +44,7 @@
 												
 												<i class="fa fa-home" aria-hidden="true"></i>
 
-												Acceuil
+												Accueil
 											</a>
 										</li>
 										<li class="nav-item">
@@ -116,7 +116,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary creercode">Créé</button>
+        <button type="button" class="btn btn-primary creercode">Créer</button>
       </div>
     </div>
   </div>
