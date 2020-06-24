@@ -106,7 +106,7 @@
 									</div>
 											<div class="form-group">
 												<div class="input-group mb-3">
-													<input type="text" class="form-control cosdeinoute" placeholder="votre code" aria-label="code" aria-describedby="basic-addon2" readonly="">
+													<input type="text" class="form-control cosdeinoute" placeholder="votre code" aria-label="code" aria-describedby="basic-addon2" >
 													<div class="input-group-append">
 														<span class="input-group-text" id="codePromot">CODE</span>
 													</div>

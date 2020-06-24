@@ -1,5 +1,5 @@
  
- <input type="text" id="URLUSER"  hidden name="URLUSER" value="http://api.d.com/oraimo/users.php">
+ <input type="text" id="URLUSER"  hidden name="URLUSER" value="https://api.kitsmass.com/oraimo/users.php">
 
 <script src="/App/User/Web/js/core/jquery.3.2.1.min.js"></script>
 	<script src="/App/User/Web/js/core/popper.min.js"></script>
@@ -33,6 +33,6 @@
 	<script src="/App/User/Web/js/millenium2.min.js"></script>
 
 	<!-- Millenium DEMO methods, don't include it in your project! -->
-	<script src="/App/User/Web/js/functions2.js"></script>
-	<script src="/App/User/Web/js/oraimo2.js"></script>
+	<script src="/App/User/Web/js/functions4.js"></script>
+	<script src="/App/User/Web/js/oraimo3.js"></script>
 	<script src="/App/User/Web/js/datatableloader.js"></script>

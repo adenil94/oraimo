@@ -33,7 +33,7 @@
 										</div>
 										<div class="col">
 											<div class="number"><span id="vente" > 25 </span>  </div>
-											<div class="title">Vendues <br> réaliser</div>
+											<div class="title">Ventes <br> réaliser</div>
 										</div>
 										<div class="col">
 											<div class="number"><span id="Attente" > 134</span></div>

@@ -95,3 +95,7 @@ $( document).on( 'click','#demande_payement', function (e){
     }
 } );
 
+$(document).on("click",".partage",function(){
+   var url= $(this).attr("data-url");
+    window.open("whatsapp://send?text= bénéficie d'une reduction de 5% sur toutes tes achats en suivant ce lien  "+url+" ", '_blank');
+})
