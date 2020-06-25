@@ -54,7 +54,7 @@
                                     <ul>
                                         <li>Livraison à domicile</li>
                                         <li>Paiement à la livraison </li>
-                                        <li>Pas satisfait rembourssé</li>
+                                        <li>Pas satisfait remboursé</li>
                                     </ul>
                                 </div>
                               
