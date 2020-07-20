@@ -266,8 +266,6 @@ function userActif(response){
         tr = tr +`<tr><td>`+i+`</td>
                 <td> <a class="btn btn-info partage" href="#" data-url="https://oraimo-bj.com/?code=`+promotion[i].codepromo+`" >Partager</a>
                 </td>
-                <td>`+promotion[i].date_debut+`</td>
-                <td>`+promotion[i].date_fin+` </td>
                 <td>`+promotion[i].codepromo+`</td>
                 <td>
                      <button class="btn btn-danger del"

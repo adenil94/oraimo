@@ -5,19 +5,19 @@
 				<span class="count ml-1"></span>
 			</a>
 			
-			<div class="ml-auto">
-				<a href="#" data-toggle="modal" data-target="#codeModale" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter un code</a>
-			</div>
+			
 		</div>
 	</div>
 
+<div style="overflow-x: auto;">
+				<div class="ml-auto">
+				<a href="#" data-toggle="modal" data-target="#codeModale" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter un code</a>
+			</div>
 	<table id="code_promotion" class="display table table-striped table-hover" >
 			<thead>
 				<tr>
 					<th>#</th>
 					<th>lien</th>
-					<th>Date de debut</th>
-					<th>Date de fin </th>
 					<th>code</th>
 					<th>action</th>
 				</tr>
@@ -27,4 +27,5 @@
 				
 			</tbody>
 	</table>
+</div>
 </div>

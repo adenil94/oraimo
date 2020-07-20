@@ -82,7 +82,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2">
-                                                  <small style="display: none;"> Code promo à utiliser : ORAIMOPL15</small>
+                                                  <small  style="color: red"> Code promo à utiliser : ORAIMOPROMOINDE10</small>
                                                     <div class="col-md-12">
                                                       <input type="text" class="form-control"  name="code_promot" id="code_promot" placeholder="Code promo" value="" required >
                                                     </div>

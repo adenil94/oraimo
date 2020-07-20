@@ -20,15 +20,15 @@ $(document).on("click",".creercode",function(){
 
 	var valeur=$('#selectFloatingLabel').val();
 	var code = valeur.split("-");
-	var nom=$("#username").html();
-	var nom=$("#username").html();
+	var nom=$(".cosdeinoute").val();
 	var nomcodvar=nom.replace(" ", "");
 
 	var id=code[0];
 	if (code[1]=="CODE") {
 		swal("Oups!", "Choisissez une promotion SVP", "error");
 	}else{
-	var usercode=nomcodvar.toUpperCase()+code[1];
+	var usercode1=nomcodvar.toUpperCase()+code[1];
+  var usercode=usercode1.replace(" ", "");
 	var iduser=$("#iduser").html();
 	var URLUSER=$('#URLUSER').val();
 	    $.get( URLUSER, { action:"set_user_promo_code",idpromot:id,code:usercode,user:iduser} )
@@ -97,5 +97,5 @@ $( document).on( 'click','#demande_payement', function (e){
 
 $(document).on("click",".partage",function(){
    var url= $(this).attr("data-url");
-    window.open("whatsapp://send?text= bénéficie d'une reduction de 5% sur toutes tes achats en suivant ce lien  "+url+" ", '_blank');
+    window.open("whatsapp://send?text= Bénéficie d'une reduction de 5% sur tous tes achats en suivant ce lien  "+url+" ", '_blank');
 })
