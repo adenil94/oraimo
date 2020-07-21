@@ -35,7 +35,9 @@ class oraimoController extends BackController
 		$this->page->addVar('name',$name);
 		$this->page->addVar('images',$images);
 		$this->page->addVar('prix',$prix);
-		$this->page->addVar('description',$description);
+    $this->page->addVar('description',$description);
+		$this->page->addVar('idArticle',$id);
+
 
 $this->page->addVar('descriptionMeta',$description);
 $this->page->addVar('titleMeta',$name);

@@ -61,7 +61,7 @@
                             </div>
                              <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom="<?=$name?>" data-prix="<?=$prix?>"     
+                                         data-nom="<?=$name?>" data-prix="<?=$prix?>" data-id="<?=$idArticle?>"    
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
                                         Acheter</button>
                                     </div>
