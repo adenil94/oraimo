@@ -3,19 +3,23 @@
             display: none;
         } 
     </style>
-    <div class="banner-wrapper has_background">
-        <img src="/App/Frontend/Web/images/banner-for-alll.jpg"
-             class="img-responsive attachment-1920x447 size-1920x447" alt="img">
-        <div class="banner-wrapper-inner">
-            <h1 class="page-title container" style="color: white"></h1>
-            <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs container">
-                <ul class="trail-items breadcrumb">
-                    <li class="trail-item trail-begin"><a href="#" style="color: white"><span></span></a></li>
-                    <li class="trail-item trail-end active"><span style="color: white"></span>
-                    </li>
-                </ul>
-            </div>
+          <section id="content" role="main">
+               <div class="fluid-container .banner-row-container">
+                    <div class="row banner-row">
+                        <div class="col-special "> 
+                            <img  data-src="/App/Frontend/Web/images/banner-for-alll.jpg" src="/App/Frontend/Web/images/banner-for-alll.jpg" alt="Banner" class="img-responsive " />
+                            <!-- <img  src="/App/Home/Web/img/loaderimg.gif" alt="Banner" class="img-responsive" /> -->
+                            <div class="banner-row-content newsletter-banner-content newsletter-content light text-center">
+                              <!--    <h3><?=$section1_titre1?></h3>
+                                <h2><?=$section1_titre2?></h2>
+                                <p><?=$section1_descriptions?></p>  -->
+                                <div action="#" id="newsletter">
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
+    </section>
     </div>
 <div class="main-container shop-page no-sidebar">
     <div class="container">
