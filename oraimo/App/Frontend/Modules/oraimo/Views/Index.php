@@ -7,7 +7,7 @@
                <div class="fluid-container .banner-row-container">
                     <div class="row banner-row">
                         <div class="col-special "> 
-                            <img  data-src="/App/Frontend/Web/images/banner-for-alll.jpg" src="/App/Frontend/Web/images/banner-for-alll.jpg" alt="Banner" class="img-responsive " />
+                            <img  data-src="/App/Frontend/Web/images/banner-for-alll.jpg" src="/App/Frontend/Web/images/Oraimo_Website_Banner.jpg" alt="Banner" class="img-responsive " />
                             <!-- <img  src="/App/Home/Web/img/loaderimg.gif" alt="Banner" class="img-responsive" /> -->
                             <div class="banner-row-content newsletter-banner-content newsletter-content light text-center">
                               <!--    <h3><?=$section1_titre1?></h3>

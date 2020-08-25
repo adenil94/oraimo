@@ -58,6 +58,7 @@
 													<th>prix reduit</th>
 													<th>description</th>
 													<th>date</th>
+													<th>date livraison</th>  
 													<th>paiement</th>
 													<th>acheteur</th>
 													<th>vendeur</th>

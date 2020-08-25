@@ -1,5 +1,5 @@
 <footer id="footer" class="footer style-01">
-    <div class="section-010">
+    <div class="section-010"> 
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -81,8 +81,14 @@
                                                       <input type="text" class="form-control" name="ville_quartier" id="ville_quartier" placeholder="Ville et lieu de livraison " value="" required>
                                                     </div>
                                                 </div>
+                                                  <div class="row mb-2">
+                                                    <div class="col-md-12">
+                                                      <small  > Date de livraison</small>
+                                                      <input type="date" class="form-control" name="date_livraison" id="date_livraison" placeholder="Date livraison " value="" required>
+                                                    </div>
+                                                </div>
                                                 <div class="row mb-2">
-                                                  <small  style="color: red"> Code promo à utiliser : ORAIMOPROMOINDE10</small>
+                                                  <small  style="color: green"> Code promo à utiliser : ORAIMORED5</small>
                                                     <div class="col-md-12">
                                                       <input type="text" class="form-control"  name="code_promot" id="code_promot" placeholder="Code promo" value="" required >
                                                     </div>
@@ -345,15 +351,16 @@ Chez KITS les commandes passées sont expédiées le jour même ! </p>
 $(document).on("click",'#Valide',function(){
 var URLUSER=$('#URLUSER').val();
 var nom_prenom=$("#nom_prenom").val();
-var numero=$("#numero").val();
+var numero=$("#numero").val().split(" ").join("");;
 var quantite=$("#quantite").val();
 var ville_quartier=$("#ville_quartier").val();
 var code_promot=$("#code_promot").val();
+var date_livraison=$("#date_livraison").val();
 
-if (nom_prenom==""|| numero==""|| ville_quartier=="" || quantite==""){
-swal("Oups!", "la quantité, le Nom, Numéro et adresse doivent être remplie  ", "error")
+if (nom_prenom==""|| numero==""|| ville_quartier=="" || quantite=="" || date_livraison==""){
+swal("Oups!", "la quantité, la date de livraison, le Nom, le numéro et l'adresse doivent être remplie  ", "error")
 }else if(numero.length<8){
-swal("Oups!", "Vérifier le numéro de téléphone SVP ", "error");
+swal("Oups!", "Vérifier le numéro de téléphone SVP (sans espace) ", "error");
 } 
 else{
      var myForm = document.querySelector('#valide_achat_form');
@@ -363,7 +370,7 @@ else{
     var rederecto='/';
     var idprogress='#progresse';
     var url=URLUSER;
-     sendForm(formData,messagesucess,rederecto,idprogress,url);  
+    sendForm(formData,messagesucess,rederecto,idprogress,url);  
 }
 
 })

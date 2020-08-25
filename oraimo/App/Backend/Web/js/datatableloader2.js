@@ -80,7 +80,7 @@ function datacommande(){
 		})
 
 }
-
+ 
 
 function datacommandeof(status){
 	var URLUSER=$('#URLUSER').val();
@@ -107,6 +107,7 @@ function datacommandeof(status){
 						<td>`+prixReduit+`</td>
 						<td>`+commande[i].description+`</td>
 						<td>`+commande[i].date+`</td>
+						<td>`+commande[i].date_livraison+`</td>
 						<td>`+commande[i].reference+`</td>
 						<td>`+commande[i].nom_prenom+`</td>
 						<td>`+commande[i].identifiant+`</td>
