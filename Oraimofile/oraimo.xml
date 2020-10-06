@@ -232,7 +232,7 @@
 <COMMON_DATATYPE ID="35" />
 </COMMON_DATATYPES>
 <TABLEPREFIXES>
-<TABLEPREFIX Name="Defaut (pas de pr\233fixe)" />
+<TABLEPREFIX Name="Defaut (pas de pr\\233fixe)" />
 </TABLEPREFIXES>
 <REGIONCOLORS>
 <REGIONCOLOR Color="Red=#FFEEEC" />

@@ -31,7 +31,7 @@ class Router
 
 
       // Si la route correspond à l'URL
-      if (($varsValues = $route->match($url)) !== false)
+      if (($varsValues = $route->match($url)) !== false) 
       {
 
         // Si elle a des variables

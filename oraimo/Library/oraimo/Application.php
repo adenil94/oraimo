@@ -13,7 +13,7 @@ abstract class Application extends ApplicationComponent
   protected $name;
   protected $user;
   protected $config;
-  
+   
   public function __construct()
   {
     $this->httpRequest = new HTTPRequest($this);
