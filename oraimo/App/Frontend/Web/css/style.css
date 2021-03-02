@@ -5869,7 +5869,9 @@ body.admin-bar #yith-quick-view-modal {
 	line-height: 1;
 	text-transform: uppercase;
 	margin-bottom: 5px;
-	position: relative;
+	position: absolute;
+    top: 15px;
+    right: 15px;
 	text-align: center;
 }
 .sold-out span, .onnew span, .onsale span {
