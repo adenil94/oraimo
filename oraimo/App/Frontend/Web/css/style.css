@@ -7022,7 +7022,6 @@ body.admin-bar #yith-quick-view-modal {
 		padding-left: 20px;
 	}
 }
-@media (max-width: 767px) {
 	.product-item.style-02 .group-button {
 		min-width: 120px;
 	}
@@ -7036,7 +7035,7 @@ body.admin-bar #yith-quick-view-modal {
 		padding-left: 10px;
 	}
 	.sold-out, .onnew, .onsale {
-		font-size: 34px;
+		font-size: 13px;
 	}
 	.sold-out span, .onnew span, .onsale span {
 		height: 16px;
@@ -7127,7 +7126,7 @@ body.admin-bar #yith-quick-view-modal {
 	.product-item.style-07 .product-thumb {
 		width: 100%;
 	}
-}
+
 @media (max-width: 600px) {
 	.product-item.style-03 .equal-elem {
 		height: auto !important;
