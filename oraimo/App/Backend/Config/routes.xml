@@ -13,9 +13,6 @@
 	<route url="/crm-admin-oraimo/commande_Encours" module="Crm" action="CommandeEncours" />
 	<route url="/crm-admin-oraimo/commande_Terminer" module="Crm" action="CommandeTerminer" />
 
-	<route url="/crm-admin-oraimo/reduction" module="Crm" action="Reduction" />
-	<route url="/crm-admin-oraimo/Liste-reduction" module="Crm" action="ReductionTable" />
-
 	<route url="/" module="GestionMaison" action="Connexion" />
 
 </routes>

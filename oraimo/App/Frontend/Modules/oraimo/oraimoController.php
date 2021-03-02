@@ -32,23 +32,11 @@ class oraimoController extends BackController
 		$images=$urlimag."/".$img[0];
 		$prix=$article["response"]['Prix'];
 		$description=$article["response"]['Descrption'];
-    $prixReduction=($prix-($prix*14)/100);
-
-    if ($prixReduction != $prix) 
-    {
-      $prixfinal = $prixReduction;
-    }
-    else
-      $prixfinal = $prix;
-
-
 		$this->page->addVar('name',$name);
 		$this->page->addVar('images',$images);
 		$this->page->addVar('prix',$prix);
     $this->page->addVar('description',$description);
 		$this->page->addVar('idArticle',$id);
-    $this->page->addVar('prixReduction',$prixReduction);
-    $this->page->addVar('prixfinal',$prixfinal);
 
 
 $this->page->addVar('descriptionMeta',$description);

@@ -160,23 +160,6 @@
 						</li>
 						<li class="nav-item submenu">
 							<a class="nav-link" href="#">
-								<i class="link-icon icon-book-open"></i>
-								<span class="menu-title">Réduction</span>
-							</a>
-							<div class="navbar-dropdown animated fadeIn">
-								<ul>
-									<li>
-										<a href="/crm-admin-oraimo/reduction">Création</a>
-									</li>
-									<li>
-										<a href="/crm-admin-oraimo/Liste-reduction">Liste des réductions</a>
-									</li>
-									
-								</ul>
-							</div>
-						</li>
-						<li class="nav-item submenu">
-							<a class="nav-link" href="#">
 								<i class="link-icon icon-pie-chart"></i>
 								<span class="menu-title">Statistique</span>
 							</a>
