@@ -39,7 +39,14 @@ function dataArticle(){
 		 var count= article.length;
 		 var li="";
 		  for (var i = 0 ; i < count; i++) {
-		  	var images=article[i].picture.split(";")
+		  	var images=article[i].picture.split(";");
+            var prixReduction= parseInt((article[i].prix) - (parseInt(article[i].prix)* 14/100));
+            if (prixReduction != article[i].prix)
+            {
+                prixfinal = prixReduction;
+            }
+            else
+                prixfinal = article[i].prix;
 		
 		  	li = li +`
                         <li class=" grid product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-24 mb-3 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
