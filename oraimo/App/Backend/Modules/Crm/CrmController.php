@@ -122,4 +122,26 @@ class CrmController extends BackController
   {
     
   }
+
+  /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/Liste-reduction
+ * @Copyright (c) Oraimo, 2020
+ */
+   public function executeReductionTable(HTTPRequest $request)
+  {
+    
+  }
+
+  /**
+ * @license Oraimo License
+ * @author Andil ADEBIYI <andiladebiyi@gmail.com>
+ * @route /crm-admin-oraimo/reduction
+ * @Copyright (c) Oraimo, 2020
+ */
+   public function executeReduction(HTTPRequest $request)
+  {
+    
+  }
  } 
