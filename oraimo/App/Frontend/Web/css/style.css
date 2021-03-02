@@ -5884,11 +5884,15 @@ body.admin-bar #yith-quick-view-modal {
 }
 .onsale::before {
 	font-family: 'Flaticon';
-	content: '\f119';
 	color: #8ec31f;
 }
 .onsale {
-	color: #8ec31f;
+	color: #FFF;
+	background-color: #8ec31f;
+    border-color: #8ec31f;
+    border: 2px solid;
+    padding: 3px;
+    border-radius: 5px;
 }
 .sold-out {
 	background-color: #b6b6b6;
