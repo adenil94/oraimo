@@ -156,35 +156,6 @@ function datapromotion(){
 
 }
 
-function datareduction(){	
-	var URLUSER=$('#URLUSER').val();
-	$.get( URLARTICLE, { action:"get_aticles" } )
-	.done(function( data ) {
-		 // var response=JSON.parse(data);
-		 var article=data.response;
-		 var count= article.length;
-		 var tr="";
-		  for (var i = 0 ; i < count; i++) {
-		  	tr = tr +`<tr>
-                    <td>`+article[i].nom+`</td>
-					<td>`+article[i].reduction+`</td>
-					<td>`+article[i].debut_reduction+`</td>
-					<td>`+article[i].fin_reduction+`</td>
-
-					<td> <button class="btn btn-info modifierReduction"
-						 data-idreduction="`+article[i].idarticle+`">Modifier </button></td>
-
-					<td > <button class="btn btn-info delReduction"
-						 data-idreduction="`+article[i].idarticle+`">supprimer </button></td></tr>
-					
-		  			`;
-		  }
-		  $("#tablereductionbody").html(tr);
-		  $('#tablereduction').DataTable();
-		})
-
-}
-
 function dataVendeur(){
 		var URLUSER=$('#URLUSER').val();
 	$.get( URLUSER, { action:"get_all_users" } )
