@@ -39,12 +39,21 @@
                                 </div>
                             </div>
                             <div class="summary entry-summary">
-                                <div class="flash">
-                                    <span class="onnew"><span class="text">New</span></span></div>
+                                <div class="product-label">
+                                    <span class="onsale"><strong>-14%</strong></span></div>
                                 <h1 class="product_title entry-title"><?=$name?></h1>
-                                <p class="price"> <span
-                                        class="oraimolg-Price-amount amount"><span
-                                        class="oraimolg-Price-currencySymbol"><?=$prix?> FCFA</p>
+                                <p class="price">
+                                    <del>
+                                        <span class="kobolg-Price-amount amount">
+                                            <span class="kobolg-Price-currencySymbol"></span><?=$prix?> FCFA
+                                        </span>
+                                    </del> 
+                                    <ins>
+                                        <span
+                                            class="oraimolg-Price-amount amount"><span
+                                            class="oraimolg-Price-currencySymbol"></span><?=$prixReduction?> FCFA</span>
+                                    </ins>
+                                    </p>
                                 <p class="stock in-stock">
                                    Disponibilité: <span> Oui</span>
                                 </p>
@@ -61,7 +70,7 @@
                             </div>
                              <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom="<?=$name?>" data-prix="<?=$prix?>" data-id="<?=$idArticle?>"    
+                                         data-nom="<?=$name?>" data-prix="<?=$prixfinal?>" data-id="<?=$idArticle?>"    
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
                                         Acheter</button>
                                     </div>

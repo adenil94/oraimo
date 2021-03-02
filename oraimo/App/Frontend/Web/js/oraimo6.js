@@ -39,7 +39,15 @@ function dataArticle(){
 		 var count= article.length;
 		 var li="";
 		  for (var i = 0 ; i < count; i++) {
-		  	var images=article[i].picture.split(";")
+		  	var images=article[i].picture.split(";");
+            var prixReduction= parseInt((article[i].prix) - (parseInt(article[i].prix)* 14/100));
+
+            if (prixReduction != article[i].prix)
+            {
+                prixfinal = prixReduction;
+            }
+            else
+                prixfinal = article[i].prix;
 		
 		  	li = li +`
                         <li class=" grid product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-24 mb-3 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
@@ -52,20 +60,32 @@ function dataArticle(){
                                              src="`+urlimage+`/`+images[0]+`"
                                              alt="`+article[i].nom+`" width="600" height="778">
                                     </a>
+                                     <div class="product-label">
+                                        <span class="onsale"><strong>-14%</strong></span>                   
+                                    </div>
                                 </div>
 
 
                                 <div class="product-info equal-elem">
                                     <h3 class="product-name product_title">
                                         <a href="/a/`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
-                                       <br> <span class="price"><span class="kobolg-Price-amount amount">
-                                        <span
-                                            class="kobolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA</span>
+                                       <br>
+                                       <span class="price">
+                                            <del>
+                                                <span class="kobolg-Price-amount amount">
+                                                    <span class="kobolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA
+                                                </span>
+                                            </del> 
+                                            <ins>
+                                                <span class="kobolg-Price-amount amount">
+                                                <span class="kobolg-Price-currencySymbol"></span>`+prixReduction+` FCFA</span>
+                                            </ins>
+                                        </span>
                                     </h3>
                                     
 
                                     <div class="rating-wapper nostar" style="text-align: center;">
-                                        <i class="fa fa-shopping-bag panierAdd" data-name="`+article[i].nom+`" data-prix="`+article[i].prix+`"  data-img="`+urlimage+`/`+images[0]+`" style="font-size: 30px;color: dodgerblue; position:relative" data-id="`+article[i].idarticle+`" aria-hidden="true">
+                                        <i class="fa fa-shopping-bag panierAdd" data-name="`+article[i].nom+`" data-prix="`+prixfinal+`"  data-img="`+urlimage+`/`+images[0]+`" style="font-size: 30px;color: dodgerblue; position:relative" data-id="`+article[i].idarticle+`" aria-hidden="true">
                                         <span class="countNumberme`+article[i].idarticle+`" style="position:absolute; top:-13px;left:-6px; font-size:21px;color: #8ec31f;">0</span>
                                         </i>
                                         <i class="fa fa-share-square partage mt-4" style="font-size: 30px;color: cadetblue;" data-id="`+article[i].idarticle+`"  aria-hidden="true"></i>
@@ -76,7 +96,7 @@ function dataArticle(){
 
                                       <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom="`+article[i].nom+`" data-prix="`+article[i].prix+`"    data-id="`+article[i].idarticle+`"  
+                                         data-nom="`+article[i].nom+`" data-prix="`+prixfinal+`"    data-id="`+article[i].idarticle+`"  
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
                                         Acheter</button>
                                     </div>
@@ -94,14 +114,26 @@ function dataArticle(){
                                              src="`+urlimage+`/`+images[0]+`"
                                              alt="Modern Watches" width="600" height="778">
                                     </a>
+                                    <div class="product-label">
+                                        <span class="onsale"><strong>-14%</strong></span>                   
+                                    </div>
                                 </div>
                                 <div class="product-info">
                                     <h3 class="product-name product_title">
                                         <a href="/a/`+article[i].lien+`-`+article[i].idarticle+`">`+article[i].nom+`</a>
                                     </h3>
-                                    <span class="price"> <span
-                                            class="oraimolg-Price-amount amount"><span
-                                            class="oraimolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA</span></span>
+                                    <span class="price">
+                                        <del>
+                                            <span class="kobolg-Price-amount amount">
+                                                <span class="kobolg-Price-currencySymbol"></span>`+article[i].prix+` FCFA
+                                            </span>
+                                        </del> 
+                                        <ins> 
+                                            <span class="oraimolg-Price-amount amount">
+                                            <span class="oraimolg-Price-currencySymbol"></span>`+prixReduction+` FCFA
+                                            </span>
+                                        </ins>
+                                    </span>
                                     <div class="oraimolg-product-details__short-description">
                                         <p>`+article[i].description+`</p>
                                         
@@ -109,7 +141,7 @@ function dataArticle(){
                                 </div>
                                 <div class="group-button">
                                     <div class="group-button-inner mb-3" style="text-align: center;">
-                                         <i class="fa fa-shopping-bag panierAdd" data-name="`+article[i].nom+`" data-prix="`+article[i].prix+`"  data-img="`+urlimage+`/`+images[0]+`" style="font-size: 30px;color: dodgerblue; position:relative" data-id="`+article[i].idarticle+`" aria-hidden="true">
+                                         <i class="fa fa-shopping-bag panierAdd" data-name="`+article[i].nom+`" data-prix="`+prixfinal+`"  data-img="`+urlimage+`/`+images[0]+`" style="font-size: 30px;color: dodgerblue; position:relative" data-id="`+article[i].idarticle+`" aria-hidden="true">
                                         <span class="countNumberme`+article[i].idarticle+`" style="position:absolute; top:-13px;left:-6px; font-size:21px;color: #8ec31f;">0</span>
                                         </i>
                                         <i class="fa fa-share-square partage mt-4" style="font-size: 30px;color: cadetblue;" data-id="`+article[i].idarticle+`"  aria-hidden="true"></i>
@@ -120,7 +152,7 @@ function dataArticle(){
                                     </div>
                                     <div class="rating-wapper nostar" style="text-align: center;">
                                         <button class='btn btn-sm btn-info acherter '
-                                         data-nom="`+article[i].nom+`" data-prix="`+article[i].prix+`" data-id="`+article[i].idarticle+`"  
+                                         data-nom="`+article[i].nom+`" data-prix="`+prixfinal+`" data-id="`+article[i].idarticle+`"  
                                          style="width: 100%;background-color: #8ec31f;    border-color: #8ec31f;" >
                                         Acheter</button>
                                     </div>
