@@ -158,25 +158,31 @@ function datapromotion(){
 
 function datareduction(){	
 	var URLUSER=$('#URLUSER').val();
-	$.get( URLARTICLE, { action:"get_aticles" } )
+	$.get( URLUSER, { action:"get_reduction" } )
 	.done(function( data ) {
 		 // var response=JSON.parse(data);
-		 var article=data.response;
-		 var count= article.length;
+		 var reduction=data.response;
+		 var count= reduction.length;
 		 var tr="";
 		  for (var i = 0 ; i < count; i++) {
 		  	tr = tr +`<tr>
-                    <td>`+article[i].nom+`</td>
-					<td>`+article[i].reduction+`</td>
-					<td>`+article[i].debut_reduction+`</td>
-					<td>`+article[i].fin_reduction+`</td>
+                    <td>`+reduction[i].nom_article+`</td>
+					<td>`+reduction[i].reduction+`</td>
+					<td>`+reduction[i].date_debut+`</td>
+					<td>`+reduction[i].date_fin+`</td>
 
-					<td> <button class="btn btn-info modifierReduction"
-						 data-idreduction="`+article[i].idarticle+`">Modifier </button></td>
+					<td> <button
+						data-reduction="`+reduction[i].reduction+`" 
+						data-date_debut="`+reduction[i].date_debut+`" 
+						data-date_fin="`+reduction[i].date_fin+`" 
+						data-idarticle="`+reduction[i].idarticle+`"  class="btn btn-info editReduction"
+						 data-idreduction="`+reduction[i].idreduction+`">Modif </button></td>
 
-					<td > <button class="btn btn-info delReduction"
-						 data-idreduction="`+article[i].idarticle+`">supprimer </button></td></tr>
-					
+					<td > <button class="btn btn-info terminateReduction"
+						 data-idreduction="`+reduction[i].idreduction+`">terminer </button></td>
+
+					<td > <button class="btn btn-danger delReduction"
+						 data-idreduction="`+reduction[i].idreduction+`">del </button></td></tr>					
 		  			`;
 		  }
 		  $("#tablereductionbody").html(tr);
@@ -239,4 +245,19 @@ function dataDemandpaiement(){
 		})
 }
 
+function selectArticle(){
+	var URLARTICLE=$('#URLARTICLE').val();
+	$.get( URLARTICLE, { action:"get_aticles" } )
+	.done(function( data ) {
+		 var response=JSON.parse(data);
+		 var article=response.response;
+		 var count= article.length;
+		 var option="";
+		  for (var i = 0 ; i < count; i++) {
+		  	option = option + `<option value ="`+article[i].idarticle+`">`+article[i].nom+`</option>`;
 
+		  }
+		  $("#selectFloatingLabel").html(option)
+		  $("#selectFloatingLabel").Select2();
+		})
+}
