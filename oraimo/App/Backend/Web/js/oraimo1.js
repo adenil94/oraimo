@@ -510,15 +510,23 @@ $( document).on( 'click','.paiementAction', function (e)
 $( document).on( 'click','#enregistrer_reduction', function (e)
     {
     e.preventDefault();
-    		var URLUSER=$('#URLUSER').val();
-            
+    var idarticle = document.getElementsByName("idarticle");
+	var reduction = document.getElementsByName("reduction");
+	var date_debut = document.getElementsByName("date_debut");
+	var date_fin = document.getElementsByName("date_fin");
+    	if (checkEmptyInput(idarticle)==false|| checkEmptyInput(reduction) ==false || checkEmptyInput(date_debut)==false   ) {
+    		swal("Oups!", "Rassurez-vous d'avoir renseigné  le nom de l'article, la reduction et la date de debut de la réduction!", "error");
+    	}else{
+            $('.overflow').show();
+    		var URLUSER=$('#URLUSER').val();            
             var myForm = document.querySelector('#newformdada');
             var formData= new FormData(myForm); 
-            var messagesucess="Enregistrement éffectué!";
+            var messagesucess="Réduction éffectué!";
 			var rederecto='/crm-admin-oraimo/reduction';
 			var idprogress='#progresse';
 			var url=URLUSER;
-			 sendForm2(formData,messagesucess,rederecto,idprogress,url);       
+			 sendForm2(formData,messagesucess,rederecto,idprogress,url);
+           // console.log( file );       
     } );
 
 
@@ -529,7 +537,7 @@ $( document).on( 'click','.delReduction', function (e)
     e.preventDefault();
 	if (confirm("Voulez-vous vraiment supprimer cette réduction ? ")) {
 	var id_reduction=$(this).attr("data-idreduction");
-        $.get( URLUSER, { action:"delete_reduction",idreduction: id_reduction, } )
+        $.get( URLUSER, { action:"suspend_reduction",idreduction: id_reduction, } )
       .done(function(data) {
       	 location.reload(true);
       });
@@ -537,16 +545,50 @@ $( document).on( 'click','.delReduction', function (e)
 } );
 
 
-$( document).on( 'click','.modifierReduction', function (e)
-    {
+$(document).on("click",".editReduction",function(){
+	var reduction=$(this).attr("data-reduction");
+	var date_debut=$(this).attr("data-date_debut");
+	var date_fin=$(this).attr("data-date_fin");
+	var idarticle=$(this).attr("data-idarticle");
 
+	$("#reductionEdit").val(reduction);
+	$("#date_debutEdit").val(date_debut);
+	$("#date_finEdit").val(tag);
+	$("#idarticleEdit").val(idarticle);
+
+	 $("#modaleEditReduction").modal();
+});
+
+$( document).on( 'click','#enregistrerEditReduction', function (e)
+    {
+    e.preventDefault();
+	var idarticle = document.getElementsByName("idarticle");
+	var reduction = document.getElementsByName("reduction");
+	var date_debut = document.getElementsByName("date_debut");
+	var date_fin = document.getElementsByName("date_fin");
+    	if (checkEmptyInput(idarticle)==false|| checkEmptyInput(reduction) ==false || checkEmptyInput(date_debut)==false   ) {
+    		swal("Oups!", "Rassurez-vous d'avoir renseigné  le nom de l'article, la reduction et la date de debut de la réduction!", "error");
+    	}else{            
+            var myForm = document.querySelector('#newformdadaedit');
+            var formData= new FormData(myForm); 
+            var messagesucess="Modification de la réduction éffectué!";
+			var rederecto='/crm-admin-oraimo/Liste-reduction';
+			var idprogress='#progresse';
+			var url=URLUSER;
+			 sendForm(formData,messagesucess,rederecto,idprogress,url);
+           // console.log( file );
+       }
+    } );
+
+$( document).on( 'click','.terminateReduction', function (e)
+    {
 	var URLUSER=$('#URLUSER').val();
     e.preventDefault();
-	if (confirm("Voulez-vous vraiment modifier cette réduction ? ")) {
+	if (confirm("Voulez-vous vraiment terminer cette réduction ? ")) {
 	var id_reduction=$(this).attr("data-idreduction");
-        $.get( URLUSER, { action:"modifier_reduction",idreduction: id_reduction, } )
+        $.get( URLUSER, { action:"end_reduction",idreduction: id_reduction, } )
       .done(function(data) {
       	 location.reload(true);
       });
-	}
- } );
+	}  } );
+
