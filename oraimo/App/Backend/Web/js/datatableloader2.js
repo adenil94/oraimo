@@ -258,6 +258,7 @@ function selectArticle(){
 
 		  }
 		  $("#selectFloatingLabel").html(option)
-		  $("#selectFloatingLabel").Select2();
+		  $("#selectFloatingLabel").select2();
 		})
+		  
 }
