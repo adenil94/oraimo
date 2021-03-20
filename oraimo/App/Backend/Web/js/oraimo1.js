@@ -527,7 +527,8 @@ $( document).on( 'click','#enregistrer_reduction', function (e)
 			var url=URLUSER;
 			 sendForm2(formData,messagesucess,rederecto,idprogress,url);
            // console.log( file );       
-    } );
+    } 
+});
 
 
 $( document).on( 'click','.delReduction', function (e)
