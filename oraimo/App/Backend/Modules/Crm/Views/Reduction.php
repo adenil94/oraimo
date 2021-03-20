@@ -45,7 +45,7 @@
 										    <div id="AricleClone1 " class="row col-12">
 
 										    	<div class="form-group form-floating-label col-md-4 col-12">
-													<select class="form-control input-border-bottom" id="selectFloatingLabel" required name="nom[]">
+													<select class="form-control input-border-bottom" id="selectFloatingLabel" required name="idarticle">
 														<option value="">&nbsp;</option>
 														<option>1</option>
 													</select>
@@ -53,7 +53,7 @@
 												</div>
 
 												<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
-													<select class="form-control input-border-bottom" id="selectFloatingLabel" name="reduction" required>
+													<select class="form-control input-border-bottom" id="inputFloatingLabel" name="reduction" required>
 														<option value="">&nbsp;</option>
 														<?php
 											                for ($i=5;$i<=95;$i=$i+5)
@@ -101,3 +101,6 @@
 				</div>
 			</div>
 		</div>
+<script type="text/javascript">
+	selectArticle();
+</script>
