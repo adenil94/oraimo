@@ -554,8 +554,9 @@ $(document).on("click",".editReduction",function(){
 
 	$("#reductionEdit").val(reduction);
 	$("#date_debutEdit").val(date_debut);
-	$("#date_finEdit").val(tag);
+	$("#date_finEdit").val(date_fin);
 	$("#idarticleEdit").val(idarticle);
+	$("#idreductionEdit").val(idreduction);
 
 	 $("#modaleEditReduction").modal();
 });
@@ -567,6 +568,7 @@ $( document).on( 'click','#enregistrerEditReduction', function (e)
 	var reduction = document.getElementsByName("reduction");
 	var date_debut = document.getElementsByName("date_debut");
 	var date_fin = document.getElementsByName("date_fin");
+	var idreduction = document.getElementsByName("idreduction");
     	if (checkEmptyInput(idarticle)==false|| checkEmptyInput(reduction) ==false || checkEmptyInput(date_debut)==false   ) {
     		swal("Oups!", "Rassurez-vous d'avoir renseigné  le nom de l'article, la reduction et la date de debut de la réduction!", "error");
     	}else{            

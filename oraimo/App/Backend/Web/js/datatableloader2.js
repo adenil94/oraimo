@@ -185,7 +185,7 @@ function datareduction(){
 						 data-idreduction="`+reduction[i].idreduction+`">del </button></td></tr>					
 		  			`;
 		  }
-		  $("#tablereductionbody").html(tr);
+		  $("#tablereductionbody").html(tr)
 		  $('#tablereduction').DataTable();
 		})
 
@@ -257,8 +257,17 @@ function selectArticle(){
 		  	option = option + `<option value ="`+article[i].idarticle+`">`+article[i].nom+`</option>`;
 
 		  }
-		  $("#selectFloatingLabel").html(option)
+		  $("#selectFloatingLabel").html(option);
 		  $("#selectFloatingLabel").select2();
 		})
 		  
+}
+
+function selectReduction(){
+	var reduction="";
+	for (var i = 5; i <= 95; i=i+5) {
+		reduction = reduction + `<option value ="`+[i]+`">`+[i]+`</option>`;
+	};
+	$("#inputFloatingLabel").html(reduction);
+	$("#inputFloatingLabel").select2();
 }

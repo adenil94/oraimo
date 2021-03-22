@@ -45,24 +45,17 @@
 										    <div id="AricleClone1 " class="row col-12">
 
 										    	<div class="form-group form-floating-label col-md-4 col-12">
+										    		<small>Nom de l'article</small><br>
 													<select class="form-control input-border-bottom" id="selectFloatingLabel" required name="idarticle">
 														<option value="">&nbsp;</option>
-														<option>1</option>
 													</select>
-													<label for="selectFloatingLabel" class="placeholder">Nom de l'article</label>
 												</div>
 
 												<div class="form-group form-floating-label col-md-4 col-12 col-lg-4">
+													<small>réduction (%)</small> <br>
 													<select class="form-control input-border-bottom" id="inputFloatingLabel" name="reduction" required>
-														<option value="">&nbsp;</option>
-														<?php
-											                for ($i=5;$i<=95;$i=$i+5)
-											                { 
-											                    echo "<option value=$i>$i</option>";
-											                }                                                   
-	            										?>
-													</select>
-													<label for="inputFloatingLabel" class="placeholder">réduction (%)</label> 
+														<option value="">&nbsp;</option>														
+													</select>													
 												</div>
 												
 												<div class="form-group form-floating-label col-md-4 col-12">
@@ -103,4 +96,5 @@
 		</div>
 <script type="text/javascript">
 	selectArticle();
+	selectReduction();
 </script>
