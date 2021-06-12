@@ -17,16 +17,16 @@ function dataArticle(){
 					<td>`+article[i].lien+`</td>
 					<td>`+article[i].description+`</td>
 					<td>
-						<button 
-						data-nom="`+article[i].nom+`" 
-						data-prix="`+article[i].prix+`" 
-						data-tag="`+article[i].tag+`" 
-						data-description="`+article[i].description+`" 
-						data-idarticle="`+article[i].idarticle+`" 
+						<button
+						data-nom="`+article[i].nom+`"
+						data-prix="`+article[i].prix+`"
+						data-tag="`+article[i].tag+`"
+						data-description="`+article[i].description+`"
+						data-idarticle="`+article[i].idarticle+`"
 						class="btn btn-info edit">Modif</button> <button class="btn btn-danger del"
 						 data-img="`+article[i].picture+`"
 						 data-idarticle="`+article[i].idarticle+`">del</button></td></tr>
-					
+
 		  			`;
 		  }
 		  $("#tableArtclebody").html(tr)
@@ -72,15 +72,24 @@ function datacommande(){
 						 data-idarticle="`+commande[i].idcommande+`">Annuler </button>
 
 						 </td></tr>
-					
+
 		  			`;
 		  }
 		  $("#tablecommandebody").html(tr)
-		  $('#commandevalidate').DataTable();
+		  $('#commandevalidate').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+        ],
+				"lengthMenu": [[10, -1], [10, "Todo"]],
+    });
 		})
 
 }
- 
+
 
 function datacommandeof(status){
 	var URLUSER=$('#URLUSER').val();
@@ -120,7 +129,7 @@ function datacommandeof(status){
 							 data-idarticle="`+commande[i].idcommande+`">Annuler </button>
 
 							 </td></tr>
-						
+
 			  			`;
 		  	}
 		  }
@@ -147,7 +156,7 @@ function datapromotion(){
 
 					<td > <button class="btn btn-info terminatePromotion"
 						 data-idpromotion="`+promotion[i].idtype_promo+`">terminer </button></td></tr>
-					
+
 		  			`;
 		  }
 		  $("#tablepromotionbody").html(tr);
@@ -175,7 +184,7 @@ function dataVendeur(){
 						 <button class="btn btn-warning userAction" data-action="attente"
 						 data-iduser="`+users[i].idusers+`">Suspendre </button>
 						 </td></tr>
-					
+
 		  			`;
 		  }
 		  $("#tablevendeurbody").html(tr);
@@ -202,12 +211,10 @@ function dataDemandpaiement(){
 						 <button class="btn btn-warning paiementAction" data-action="annuler"
 						 data-iduser="`+paiement[i].iddemand_paiement+`">Annuler </button>
 						 </td></tr>
-					
+
 		  			`;
 		  }
 		  $("#tableDemandpaiementrbody").html(tr);
 		  $('#Demandpaiementvalidate').DataTable();
 		})
 }
-
-

@@ -18,6 +18,9 @@
 
 	<!-- CSS Files -->
   <link rel="stylesheet" href="/Web/css/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+
 
 	<link rel="stylesheet" href="/App/Backend/Web/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/App/Backend/Web/css/Oraimo.min.css?1">
